@@ -1,0 +1,643 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52FF84BC1ED40942007305DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FF84BB1ED40942007305DB /* main.m */; };
+		52FF84BF1ED40942007305DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FF84BE1ED40942007305DB /* AppDelegate.m */; };
+		52FF84C21ED40942007305DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FF84C11ED40942007305DB /* ViewController.m */; };
+		52FF84C51ED40942007305DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FF84C31ED40942007305DB /* Main.storyboard */; };
+		52FF84C71ED40942007305DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FF84C61ED40942007305DB /* Assets.xcassets */; };
+		52FF84CA1ED40942007305DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FF84C81ED40942007305DB /* LaunchScreen.storyboard */; };
+		52FF84D51ED40942007305DB /* TengleHappySchoolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FF84D41ED40942007305DB /* TengleHappySchoolTests.m */; };
+		52FF84E01ED40942007305DB /* TengleHappySchoolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FF84DF1ED40942007305DB /* TengleHappySchoolUITests.m */; };
+		52FF84F11ED40968007305DB /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 52FF84ED1ED40968007305DB /* image.png */; };
+		52FF84F21ED40968007305DB /* index1.css in Resources */ = {isa = PBXBuildFile; fileRef = 52FF84EE1ED40968007305DB /* index1.css */; };
+		52FF84F31ED40968007305DB /* index1.html in Resources */ = {isa = PBXBuildFile; fileRef = 52FF84EF1ED40968007305DB /* index1.html */; };
+		52FF84F41ED40968007305DB /* index1.js in Resources */ = {isa = PBXBuildFile; fileRef = 52FF84F01ED40968007305DB /* index1.js */; };
+		52FF84FA1ED41705007305DB /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FF84F91ED41705007305DB /* WKWebViewController.m */; };
+		60921DA19A8E41BD93057FE6 /* libPods-TengleHappySchool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EF1FD589276A063FBE71AB /* libPods-TengleHappySchool.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52FF84D11ED40942007305DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52FF84AF1ED40942007305DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52FF84B61ED40942007305DB;
+			remoteInfo = TengleHappySchool;
+		};
+		52FF84DC1ED40942007305DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52FF84AF1ED40942007305DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52FF84B61ED40942007305DB;
+			remoteInfo = TengleHappySchool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0092CAFAE33BFB3805A644C4 /* Pods-TengleHappySchool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TengleHappySchool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TengleHappySchool/Pods-TengleHappySchool.debug.xcconfig"; sourceTree = "<group>"; };
+		52FF84B71ED40942007305DB /* TengleHappySchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TengleHappySchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52FF84BB1ED40942007305DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		52FF84BD1ED40942007305DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		52FF84BE1ED40942007305DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		52FF84C01ED40942007305DB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		52FF84C11ED40942007305DB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		52FF84C41ED40942007305DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52FF84C61ED40942007305DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52FF84C91ED40942007305DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52FF84CB1ED40942007305DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52FF84D01ED40942007305DB /* TengleHappySchoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TengleHappySchoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52FF84D41ED40942007305DB /* TengleHappySchoolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TengleHappySchoolTests.m; sourceTree = "<group>"; };
+		52FF84D61ED40942007305DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52FF84DB1ED40942007305DB /* TengleHappySchoolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TengleHappySchoolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52FF84DF1ED40942007305DB /* TengleHappySchoolUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TengleHappySchoolUITests.m; sourceTree = "<group>"; };
+		52FF84E11ED40942007305DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52FF84ED1ED40968007305DB /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
+		52FF84EE1ED40968007305DB /* index1.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = index1.css; sourceTree = "<group>"; };
+		52FF84EF1ED40968007305DB /* index1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index1.html; sourceTree = "<group>"; };
+		52FF84F01ED40968007305DB /* index1.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index1.js; sourceTree = "<group>"; };
+		52FF84F81ED416FC007305DB /* WKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
+		52FF84F91ED41705007305DB /* WKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
+		52FF84FB1ED41E34007305DB /* WKHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKHeader.h; sourceTree = "<group>"; };
+		5A2CCBE9B56BF12EB0E2E5E8 /* Pods-TengleHappySchool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TengleHappySchool.release.xcconfig"; path = "Pods/Target Support Files/Pods-TengleHappySchool/Pods-TengleHappySchool.release.xcconfig"; sourceTree = "<group>"; };
+		B7EF1FD589276A063FBE71AB /* libPods-TengleHappySchool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TengleHappySchool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52FF84B41ED40942007305DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60921DA19A8E41BD93057FE6 /* libPods-TengleHappySchool.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52FF84CD1ED40942007305DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52FF84D81ED40942007305DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3193A26711D53827A4FC6979 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0092CAFAE33BFB3805A644C4 /* Pods-TengleHappySchool.debug.xcconfig */,
+				5A2CCBE9B56BF12EB0E2E5E8 /* Pods-TengleHappySchool.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		52FF84AE1ED40942007305DB = {
+			isa = PBXGroup;
+			children = (
+				52FF84B91ED40942007305DB /* TengleHappySchool */,
+				52FF84D31ED40942007305DB /* TengleHappySchoolTests */,
+				52FF84DE1ED40942007305DB /* TengleHappySchoolUITests */,
+				52FF84B81ED40942007305DB /* Products */,
+				3193A26711D53827A4FC6979 /* Pods */,
+				FE325B93BACD4DD848696866 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		52FF84B81ED40942007305DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52FF84B71ED40942007305DB /* TengleHappySchool.app */,
+				52FF84D01ED40942007305DB /* TengleHappySchoolTests.xctest */,
+				52FF84DB1ED40942007305DB /* TengleHappySchoolUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52FF84B91ED40942007305DB /* TengleHappySchool */ = {
+			isa = PBXGroup;
+			children = (
+				52FF84FB1ED41E34007305DB /* WKHeader.h */,
+				52FF84F81ED416FC007305DB /* WKWebViewController.h */,
+				52FF84F91ED41705007305DB /* WKWebViewController.m */,
+				52FF84ED1ED40968007305DB /* image.png */,
+				52FF84EE1ED40968007305DB /* index1.css */,
+				52FF84EF1ED40968007305DB /* index1.html */,
+				52FF84F01ED40968007305DB /* index1.js */,
+				52FF84BD1ED40942007305DB /* AppDelegate.h */,
+				52FF84BE1ED40942007305DB /* AppDelegate.m */,
+				52FF84C01ED40942007305DB /* ViewController.h */,
+				52FF84C11ED40942007305DB /* ViewController.m */,
+				52FF84C31ED40942007305DB /* Main.storyboard */,
+				52FF84C61ED40942007305DB /* Assets.xcassets */,
+				52FF84C81ED40942007305DB /* LaunchScreen.storyboard */,
+				52FF84CB1ED40942007305DB /* Info.plist */,
+				52FF84BA1ED40942007305DB /* Supporting Files */,
+			);
+			path = TengleHappySchool;
+			sourceTree = "<group>";
+		};
+		52FF84BA1ED40942007305DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52FF84BB1ED40942007305DB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52FF84D31ED40942007305DB /* TengleHappySchoolTests */ = {
+			isa = PBXGroup;
+			children = (
+				52FF84D41ED40942007305DB /* TengleHappySchoolTests.m */,
+				52FF84D61ED40942007305DB /* Info.plist */,
+			);
+			path = TengleHappySchoolTests;
+			sourceTree = "<group>";
+		};
+		52FF84DE1ED40942007305DB /* TengleHappySchoolUITests */ = {
+			isa = PBXGroup;
+			children = (
+				52FF84DF1ED40942007305DB /* TengleHappySchoolUITests.m */,
+				52FF84E11ED40942007305DB /* Info.plist */,
+			);
+			path = TengleHappySchoolUITests;
+			sourceTree = "<group>";
+		};
+		FE325B93BACD4DD848696866 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7EF1FD589276A063FBE71AB /* libPods-TengleHappySchool.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52FF84B61ED40942007305DB /* TengleHappySchool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52FF84E41ED40942007305DB /* Build configuration list for PBXNativeTarget "TengleHappySchool" */;
+			buildPhases = (
+				EA28AD3F387F10427C58AC68 /* [CP] Check Pods Manifest.lock */,
+				52FF84B31ED40942007305DB /* Sources */,
+				52FF84B41ED40942007305DB /* Frameworks */,
+				52FF84B51ED40942007305DB /* Resources */,
+				1750789281B4CA22C752C7D1 /* [CP] Embed Pods Frameworks */,
+				2CCEE6808BF078C84087676E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TengleHappySchool;
+			productName = TengleHappySchool;
+			productReference = 52FF84B71ED40942007305DB /* TengleHappySchool.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52FF84CF1ED40942007305DB /* TengleHappySchoolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52FF84E71ED40942007305DB /* Build configuration list for PBXNativeTarget "TengleHappySchoolTests" */;
+			buildPhases = (
+				52FF84CC1ED40942007305DB /* Sources */,
+				52FF84CD1ED40942007305DB /* Frameworks */,
+				52FF84CE1ED40942007305DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52FF84D21ED40942007305DB /* PBXTargetDependency */,
+			);
+			name = TengleHappySchoolTests;
+			productName = TengleHappySchoolTests;
+			productReference = 52FF84D01ED40942007305DB /* TengleHappySchoolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		52FF84DA1ED40942007305DB /* TengleHappySchoolUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52FF84EA1ED40942007305DB /* Build configuration list for PBXNativeTarget "TengleHappySchoolUITests" */;
+			buildPhases = (
+				52FF84D71ED40942007305DB /* Sources */,
+				52FF84D81ED40942007305DB /* Frameworks */,
+				52FF84D91ED40942007305DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52FF84DD1ED40942007305DB /* PBXTargetDependency */,
+			);
+			name = TengleHappySchoolUITests;
+			productName = TengleHappySchoolUITests;
+			productReference = 52FF84DB1ED40942007305DB /* TengleHappySchoolUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52FF84AF1ED40942007305DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = mwi01;
+				TargetAttributes = {
+					52FF84B61ED40942007305DB = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 7U7AE55838;
+						ProvisioningStyle = Automatic;
+					};
+					52FF84CF1ED40942007305DB = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 7U7AE55838;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 52FF84B61ED40942007305DB;
+					};
+					52FF84DA1ED40942007305DB = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 7U7AE55838;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 52FF84B61ED40942007305DB;
+					};
+				};
+			};
+			buildConfigurationList = 52FF84B21ED40942007305DB /* Build configuration list for PBXProject "TengleHappySchool" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52FF84AE1ED40942007305DB;
+			productRefGroup = 52FF84B81ED40942007305DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52FF84B61ED40942007305DB /* TengleHappySchool */,
+				52FF84CF1ED40942007305DB /* TengleHappySchoolTests */,
+				52FF84DA1ED40942007305DB /* TengleHappySchoolUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52FF84B51ED40942007305DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52FF84F21ED40968007305DB /* index1.css in Resources */,
+				52FF84CA1ED40942007305DB /* LaunchScreen.storyboard in Resources */,
+				52FF84F41ED40968007305DB /* index1.js in Resources */,
+				52FF84C71ED40942007305DB /* Assets.xcassets in Resources */,
+				52FF84C51ED40942007305DB /* Main.storyboard in Resources */,
+				52FF84F11ED40968007305DB /* image.png in Resources */,
+				52FF84F31ED40968007305DB /* index1.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52FF84CE1ED40942007305DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52FF84D91ED40942007305DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1750789281B4CA22C752C7D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TengleHappySchool/Pods-TengleHappySchool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CCEE6808BF078C84087676E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TengleHappySchool/Pods-TengleHappySchool-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA28AD3F387F10427C58AC68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52FF84B31ED40942007305DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52FF84C21ED40942007305DB /* ViewController.m in Sources */,
+				52FF84BF1ED40942007305DB /* AppDelegate.m in Sources */,
+				52FF84BC1ED40942007305DB /* main.m in Sources */,
+				52FF84FA1ED41705007305DB /* WKWebViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52FF84CC1ED40942007305DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52FF84D51ED40942007305DB /* TengleHappySchoolTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52FF84D71ED40942007305DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52FF84E01ED40942007305DB /* TengleHappySchoolUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52FF84D21ED40942007305DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52FF84B61ED40942007305DB /* TengleHappySchool */;
+			targetProxy = 52FF84D11ED40942007305DB /* PBXContainerItemProxy */;
+		};
+		52FF84DD1ED40942007305DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52FF84B61ED40942007305DB /* TengleHappySchool */;
+			targetProxy = 52FF84DC1ED40942007305DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		52FF84C31ED40942007305DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52FF84C41ED40942007305DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		52FF84C81ED40942007305DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52FF84C91ED40942007305DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52FF84E21ED40942007305DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		52FF84E31ED40942007305DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52FF84E51ED40942007305DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0092CAFAE33BFB3805A644C4 /* Pods-TengleHappySchool.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7U7AE55838;
+				INFOPLIST_FILE = TengleHappySchool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mw.com.TengleHappySchool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		52FF84E61ED40942007305DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A2CCBE9B56BF12EB0E2E5E8 /* Pods-TengleHappySchool.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7U7AE55838;
+				INFOPLIST_FILE = TengleHappySchool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mw.com.TengleHappySchool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		52FF84E81ED40942007305DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7U7AE55838;
+				INFOPLIST_FILE = TengleHappySchoolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mw.com.TengleHappySchoolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TengleHappySchool.app/TengleHappySchool";
+			};
+			name = Debug;
+		};
+		52FF84E91ED40942007305DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7U7AE55838;
+				INFOPLIST_FILE = TengleHappySchoolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mw.com.TengleHappySchoolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TengleHappySchool.app/TengleHappySchool";
+			};
+			name = Release;
+		};
+		52FF84EB1ED40942007305DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7U7AE55838;
+				INFOPLIST_FILE = TengleHappySchoolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mw.com.TengleHappySchoolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TengleHappySchool;
+			};
+			name = Debug;
+		};
+		52FF84EC1ED40942007305DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7U7AE55838;
+				INFOPLIST_FILE = TengleHappySchoolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mw.com.TengleHappySchoolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TengleHappySchool;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52FF84B21ED40942007305DB /* Build configuration list for PBXProject "TengleHappySchool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52FF84E21ED40942007305DB /* Debug */,
+				52FF84E31ED40942007305DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52FF84E41ED40942007305DB /* Build configuration list for PBXNativeTarget "TengleHappySchool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52FF84E51ED40942007305DB /* Debug */,
+				52FF84E61ED40942007305DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52FF84E71ED40942007305DB /* Build configuration list for PBXNativeTarget "TengleHappySchoolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52FF84E81ED40942007305DB /* Debug */,
+				52FF84E91ED40942007305DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52FF84EA1ED40942007305DB /* Build configuration list for PBXNativeTarget "TengleHappySchoolUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52FF84EB1ED40942007305DB /* Debug */,
+				52FF84EC1ED40942007305DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52FF84AF1ED40942007305DB /* Project object */;
+}

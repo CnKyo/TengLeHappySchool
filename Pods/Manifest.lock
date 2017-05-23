@@ -1,0 +1,15 @@
+PODS:
+  - MBProgressHUD (1.0.0)
+  - WebViewJavascriptBridge (5.2.0)
+
+DEPENDENCIES:
+  - MBProgressHUD
+  - WebViewJavascriptBridge (~> 5.0)
+
+SPEC CHECKSUMS:
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  WebViewJavascriptBridge: a00b2d61252aec5207e3263d46fd0fd3cfaf7895
+
+PODFILE CHECKSUM: 6956f912fa8df901c9b10f938f1ef11483cb9803
+
+COCOAPODS: 1.2.1
