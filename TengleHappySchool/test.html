@@ -30,7 +30,7 @@
     
     <script type="text/javascript">
       function callJsAlert() {
-<!--        alert('Objective-C call js to show alert');-->
+        alert('Objective-C call js to show alert');
         
         window.webkit.messageHandlers.AppModel.postMessage({body: {'id':'1','name':'firstClicked'}});
       }

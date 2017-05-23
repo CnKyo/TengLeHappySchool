@@ -1,15 +1,26 @@
 PODS:
+  - CHWebView (0.6):
+    - CHWebView/Core (= 0.6)
+    - CHWebView/Progress (= 0.6)
+  - CHWebView/Core (0.6):
+    - CHWebView/Progress
+  - CHWebView/Progress (0.6)
   - MBProgressHUD (1.0.0)
   - WebViewJavascriptBridge (5.2.0)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
+  - CHWebView
   - MBProgressHUD
   - WebViewJavascriptBridge (~> 5.0)
+  - YYModel
 
 SPEC CHECKSUMS:
+  CHWebView: 8b6a628b23d2f182f7b93822ef959bc47a4a4338
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   WebViewJavascriptBridge: a00b2d61252aec5207e3263d46fd0fd3cfaf7895
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 6956f912fa8df901c9b10f938f1ef11483cb9803
+PODFILE CHECKSUM: e998f5822eb74a1e274bdd3b2c7eeb692659dbc8
 
 COCOAPODS: 1.2.1

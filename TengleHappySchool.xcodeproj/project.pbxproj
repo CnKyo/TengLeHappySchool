@@ -19,10 +19,9 @@
 		52FF84F21ED40968007305DB /* index1.css in Resources */ = {isa = PBXBuildFile; fileRef = 52FF84EE1ED40968007305DB /* index1.css */; };
 		52FF84F31ED40968007305DB /* index1.html in Resources */ = {isa = PBXBuildFile; fileRef = 52FF84EF1ED40968007305DB /* index1.html */; };
 		52FF84F41ED40968007305DB /* index1.js in Resources */ = {isa = PBXBuildFile; fileRef = 52FF84F01ED40968007305DB /* index1.js */; };
-		52FF84FA1ED41705007305DB /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FF84F91ED41705007305DB /* WKWebViewController.m */; };
 		52FF85081ED42862007305DB /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 52FF85071ED42862007305DB /* test.html */; };
-		52FF850B1ED42DD2007305DB /* WKWebViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FF850A1ED42DD2007305DB /* WKWebViewDelegate.m */; };
 		52FF850E1ED43223007305DB /* MWModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FF850D1ED43223007305DB /* MWModel.m */; };
+		52FF85101ED43CE0007305DB /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FF850F1ED43CE0007305DB /* JavaScriptCore.framework */; };
 		60921DA19A8E41BD93057FE6 /* libPods-TengleHappySchool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EF1FD589276A063FBE71AB /* libPods-TengleHappySchool.a */; };
 /* End PBXBuildFile section */
 
@@ -65,14 +64,11 @@
 		52FF84EE1ED40968007305DB /* index1.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = index1.css; sourceTree = "<group>"; };
 		52FF84EF1ED40968007305DB /* index1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index1.html; sourceTree = "<group>"; };
 		52FF84F01ED40968007305DB /* index1.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index1.js; sourceTree = "<group>"; };
-		52FF84F81ED416FC007305DB /* WKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
-		52FF84F91ED41705007305DB /* WKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
 		52FF84FB1ED41E34007305DB /* WKHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKHeader.h; sourceTree = "<group>"; };
 		52FF85071ED42862007305DB /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
-		52FF85091ED42DD2007305DB /* WKWebViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewDelegate.h; sourceTree = "<group>"; };
-		52FF850A1ED42DD2007305DB /* WKWebViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewDelegate.m; sourceTree = "<group>"; };
 		52FF850C1ED43223007305DB /* MWModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWModel.h; sourceTree = "<group>"; };
 		52FF850D1ED43223007305DB /* MWModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWModel.m; sourceTree = "<group>"; };
+		52FF850F1ED43CE0007305DB /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		5A2CCBE9B56BF12EB0E2E5E8 /* Pods-TengleHappySchool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TengleHappySchool.release.xcconfig"; path = "Pods/Target Support Files/Pods-TengleHappySchool/Pods-TengleHappySchool.release.xcconfig"; sourceTree = "<group>"; };
 		B7EF1FD589276A063FBE71AB /* libPods-TengleHappySchool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TengleHappySchool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FF85101ED43CE0007305DB /* JavaScriptCore.framework in Frameworks */,
 				60921DA19A8E41BD93057FE6 /* libPods-TengleHappySchool.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				52FF84FB1ED41E34007305DB /* WKHeader.h */,
-				52FF84F81ED416FC007305DB /* WKWebViewController.h */,
-				52FF84F91ED41705007305DB /* WKWebViewController.m */,
 				52FF84ED1ED40968007305DB /* image.png */,
 				52FF84EE1ED40968007305DB /* index1.css */,
 				52FF84EF1ED40968007305DB /* index1.html */,
@@ -151,8 +146,6 @@
 				52FF84BE1ED40942007305DB /* AppDelegate.m */,
 				52FF84C01ED40942007305DB /* ViewController.h */,
 				52FF84C11ED40942007305DB /* ViewController.m */,
-				52FF85091ED42DD2007305DB /* WKWebViewDelegate.h */,
-				52FF850A1ED42DD2007305DB /* WKWebViewDelegate.m */,
 				52FF84C31ED40942007305DB /* Main.storyboard */,
 				52FF84C61ED40942007305DB /* Assets.xcassets */,
 				52FF84C81ED40942007305DB /* LaunchScreen.storyboard */,
@@ -191,6 +184,7 @@
 		FE325B93BACD4DD848696866 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52FF850F1ED43CE0007305DB /* JavaScriptCore.framework */,
 				B7EF1FD589276A063FBE71AB /* libPods-TengleHappySchool.a */,
 			);
 			name = Frameworks;
@@ -391,9 +385,7 @@
 				52FF84C21ED40942007305DB /* ViewController.m in Sources */,
 				52FF850E1ED43223007305DB /* MWModel.m in Sources */,
 				52FF84BF1ED40942007305DB /* AppDelegate.m in Sources */,
-				52FF850B1ED42DD2007305DB /* WKWebViewDelegate.m in Sources */,
 				52FF84BC1ED40942007305DB /* main.m in Sources */,
-				52FF84FA1ED41705007305DB /* WKWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

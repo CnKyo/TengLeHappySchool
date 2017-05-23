@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CHWebView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -19,20 +24,35 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>YYModel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0CCCF3F36504A4579EAE11B0EDA4148C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>586F2DFA9BDCC6675C2546793A69E5CC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ECDFB98F49B8EC60D3296A6A6C267DE4</key>
+		<key>5F9A66838823F4120B7BD7C6D798C59E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B8ED454171018A33DD72925E6AB5324</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B5189776839607E5A502ADCE30569BEB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DA991C6C58748A8A8D033CED95F1D51A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

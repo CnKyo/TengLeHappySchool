@@ -9,10 +9,9 @@
 #import "ViewController.h"
 #import <WebKit/WebKit.h>
 #import "WKHeader.h"
-#import "WKWebViewDelegate.h"
 #import "MWModel.h"
 #import <objc/runtime.h>
-@interface ViewController ()<WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate,WKWebViewDelegate>
+@interface ViewController ()<WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate>
 
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) UIProgressView *progressView;
@@ -20,9 +19,7 @@
 @end
 
 @implementation ViewController
-{
-    WKUserContentController *userContentController;
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -43,7 +40,6 @@
     
     // web内容处理池
     config.processPool = [[WKProcessPool alloc] init];
-    userContentController =[[WKUserContentController alloc]init];
 
     // 通过JS与webview内容交互
     config.userContentController = [[WKUserContentController alloc]init];
@@ -85,22 +81,17 @@
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"后退" style:UIBarButtonItemStyleDone target:self action:@selector(goback)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"前进" style:UIBarButtonItemStyleDone target:self action:@selector(gofarward)];
-    
-//    //注册方法
-//    WKWebViewDelegate *delegateController = [[WKWebViewDelegate alloc]init];
-//    delegateController.delegate = self;
-//
-//    [userContentController addScriptMessageHandler:delegateController name:@"callJsAlert"];
-//}
-//- (void)dealloc{
-//    //这里需要注意，前面增加过的方法一定要remove掉。
-//    [userContentController removeScriptMessageHandlerForName:@"btnTouched"];
+
 }
 
 - (void)goback {
     if ([self.webView canGoBack]) {
         [self.webView goBack];
+
+    }else{
+        [self.navigationController popViewControllerAnimated:YES];
     }
+
 }
 
 - (void)gofarward {
@@ -109,22 +100,30 @@
     }
 }
 
-#pragma mark - WKScriptMessageHandler
+#pragma mark - WKScriptMessageHandler----****----按钮参数获取
 - (void)userContentController:(WKUserContentController *)userContentController
       didReceiveScriptMessage:(WKScriptMessage *)message {
     
-    MLLog(@"name:%@\n ----****---- body:%@\n ----****---- frameInfo:%@\n",message.name,message.body,message.frameInfo);
-    id body = message.body;
+//    MLLog(@"name:%@\n ----****---- body:%@\n ----****---- frameInfo:%@\n",message.name,message.body,message.frameInfo);
     
-    MWModel *model = [MWModel new];
-    model.mId = [[body objectForKey:@"id"] objectForKey:@"body"];
-    model.mName = [[body objectForKey:@"name"] objectForKey:@"body"];
-    
-    if ([message.name isEqualToString:@"AppModel"]) {
-        // 打印所传过来的参数，只支持NSNumber, NSString, NSDate, NSArray,
-        // NSDictionary, and NSNull类型
-        MLLog(@"%@", message.body);
+    MWModel *model = [MWModel yy_modelWithJSON:message.body];
+    MLLog(@"最后得到的对象是：%@",model.body);
+    ///oc 反调js
+    if ([model.body.id isEqualToString:@"2"]) {
+        NSString *ocTojs = [NSString stringWithFormat:@"alert('%s')","this is alertview pop to "];
+        [self.webView evaluateJavaScript:ocTojs completionHandler:^(id _Nullable result, NSError * _Nullable error) {
+            NSLog(@"%@----%@",result, error);
+        }];
+    }else{
+        ViewController *vc = [ViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
     }
+    
+//    if ([message.name isEqualToString:@"AppModel"]) {
+//        // 打印所传过来的参数，只支持NSNumber, NSString, NSDate, NSArray,
+//        // NSDictionary, and NSNull类型
+//        MLLog(@"%@", message.body);
+//    }
 }
 
 #pragma mark - KVO
@@ -219,7 +218,7 @@
 - (void)webViewDidClose:(WKWebView *)webView {
     MLLog(@"%s", __FUNCTION__);
 }
-
+#pragma mark----****----js调oc的alertview会先调用这个方法
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
     MLLog(@"%s", __FUNCTION__);
     

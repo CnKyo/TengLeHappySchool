@@ -7,93 +7,164 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09AD1BA36F5A8F50B0059E48B747C84C /* WebViewJavascriptBridgeBase.h in Headers */ = {isa = PBXBuildFile; fileRef = EE47C3C0A288B22565A6AE9BA5170C54 /* WebViewJavascriptBridgeBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1758C5E097991B0303DDFDE84E53B9A0 /* WebViewJavascriptBridge_JS.h in Headers */ = {isa = PBXBuildFile; fileRef = ED28A1A3FA54BFB52FC9A9A98AE69979 /* WebViewJavascriptBridge_JS.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		1C76817FA5353D989D7BC33E8C5997B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3292CC8DBF6352C2BF2B949CB548248F /* CoreGraphics.framework */; };
-		1CE36B2A7F7888ED6472361E687E5A37 /* Pods-TengleHappySchool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA227EC946250378D3ACEFE125DAB9 /* Pods-TengleHappySchool-dummy.m */; };
-		2FCF4150C6820DB4D29912BC903B4F44 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = C20DD6D75D42BFB77E7AAAA49DD53654 /* WKWebViewJavascriptBridge.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4010B992F3B4B1BD36850C9F2140A36C /* WebViewJavascriptBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CD2FED39C236D556E80AB8D0877B786 /* WebViewJavascriptBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F34E166FEE3FF6D6DEF7A24FA382F81 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E244E4FA8E808A15D6ECA807CDC4CE2 /* WebViewJavascriptBridgeBase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		51BB7982C67833F21F0C446E003F4C34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB56A22A987E846FF65248DA108CAD2 /* Foundation.framework */; };
-		536F7D0550F5FD9F5869CEC995CFEE9B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8A68DE5BEF31FA453D2E667151A93F /* MBProgressHUD.m */; };
-		7291E906AE8A3C1F92183154FE65DCDD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F748DA8F98E61F788C3488D6BA25DD /* QuartzCore.framework */; };
-		81CC59A3AC776210BE56292FA7B98960 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB56A22A987E846FF65248DA108CAD2 /* Foundation.framework */; };
-		85F00EDE39B0E6FA373EE54CFDB01F0B /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F9ADF911A63B4510169796FE3216B /* WebViewJavascriptBridge_JS.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		93F12B05D8333C37D9CBEA3D1782CC04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB56A22A987E846FF65248DA108CAD2 /* Foundation.framework */; };
-		A9E72C97A26E9EC04A65C469D7B3BA4D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBA94A94B982885ECCA1662BE8CD7CF /* UIKit.framework */; };
-		AC0BDF0C88EC3716A521457FB02B0DB2 /* WebViewJavascriptBridge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 444E824021344DCA9E9342578348F45F /* WebViewJavascriptBridge-dummy.m */; };
-		C8F58A3A3B2B07EE29150E7F3CFC4BB7 /* WKWebViewJavascriptBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 69CCF34323FC6DF995576685CE113905 /* WKWebViewJavascriptBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D1B5F25F426722E08367BC75B4A437A0 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 048416D429148CD975F1F1939F751476 /* WebViewJavascriptBridge.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E5229F5125ACD420659E7B2D19BB30A8 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 624C96F5074B946DE90813288ED6795A /* MBProgressHUD-dummy.m */; };
-		EA321C98029015AA4895C0B26891D8F8 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 89EB4DDFE3E6CF852AD3324C56EFD47A /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AFC4F880CDBDC75933A04E0164D2177 /* WebViewJavascriptBridgeBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBAD0AF7DF4E718BC7E00E5AF05D92A /* WebViewJavascriptBridgeBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C76817FA5353D989D7BC33E8C5997B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3972A15207D4FD87C38182D4D1129EA3 /* CoreGraphics.framework */; };
+		23BB92B119EEB350F546F4D7420E526F /* CHWebViewProress.m in Sources */ = {isa = PBXBuildFile; fileRef = B6988A15E66A4901AF046694364986F5 /* CHWebViewProress.m */; };
+		2C1AF5AAAE4C0F8204A2D47DBB413A97 /* NSObject+YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0911470C21174EB3C00171A4FEEBED1A /* NSObject+YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2EFA411364E931F13693D28BC92660C0 /* CHWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F57EEEE0DBF07E33E8C85EBF42D1405F /* CHWebViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36146D08F7F1558FB6DBA1E843C490D4 /* CHWebView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D13AA9080D4DEE14A71F1A10287477E /* CHWebView-dummy.m */; };
+		39496BE77ECE784D1DED096E2D2B8CF9 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = FF05CC651A030AFD3D4122F73A59904E /* WebViewJavascriptBridge_JS.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		455C8DD7C4AFAB4085CB34734FF13A98 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D9B129813A3013EDB41CF65B77E171 /* YYClassInfo.m */; };
+		465177061E3B9651AD4D6FD68E22A6D0 /* WebViewJavascriptBridge_JS.h in Headers */ = {isa = PBXBuildFile; fileRef = CAE8E9DD76820786E1ACA729FC6DE1EB /* WebViewJavascriptBridge_JS.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		47FF42E2C6D5D23721602EB84852825E /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBA1563D08347E2A7C6385EFC066CDC /* NSObject+YYModel.m */; };
+		4ABF516BB8C47A107C1A3A42595C508F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFBB440202E4B7F530FFD9BDAFCF3A9 /* Foundation.framework */; };
+		536F7D0550F5FD9F5869CEC995CFEE9B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 167588A3A7E1BEAE06C46FB6CDCDC44B /* MBProgressHUD.m */; };
+		578655C2B8273C9A614444ED8CE737EA /* CHHtmlConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = EC5E42EC11F9A27051A17D93A53F07D1 /* CHHtmlConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F384B971F56706225A66051857DD615 /* CHWebProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 76D56CF20E7F01A2DF68FDF431CFDC97 /* CHWebProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		618C4947F5719D1A06F416AD813B5258 /* CHHtmlConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAD4541F824CF5127371E9478FA760B /* CHHtmlConverter.m */; };
+		6706DBD25E19E222D8B485C55D785CB0 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A383E6962A469A4B37206AAB8626F373 /* CoreFoundation.framework */; };
+		677F5CDFFB342456E4BACE47F0891CC6 /* YYModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2E108A96816FE1C526325876F61E49 /* YYModel-dummy.m */; };
+		7291E906AE8A3C1F92183154FE65DCDD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9863DA5FC960273A485AF1FAD6AE7C /* QuartzCore.framework */; };
+		85864BE4034B53F999C760372E24AD7A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31679DA033436993465B6FD5401F7F8 /* UIKit.framework */; };
+		8A1905A9EBDCEEE1D1FCB31965A5678C /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 563F6F7165F528F68255AECF545C713B /* WebViewJavascriptBridgeBase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8F67A828012C66B6EB2AF8C0532016D6 /* Pods-TengleHappySchool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA227EC946250378D3ACEFE125DAB9 /* Pods-TengleHappySchool-dummy.m */; };
+		93DC4138FDE40B215671D7AC3A22C937 /* CHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C93B811EB9D9DA71EEFE649D7CC8DC /* CHWebViewController.m */; };
+		93F12B05D8333C37D9CBEA3D1782CC04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFBB440202E4B7F530FFD9BDAFCF3A9 /* Foundation.framework */; };
+		97256875A05071C3B9E940ABB6D40130 /* CHWebProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5EA2168110B253A419533FB0BABDD3 /* CHWebProgressView.m */; };
+		9D37E2C506D88AA675FDD1926782136C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFBB440202E4B7F530FFD9BDAFCF3A9 /* Foundation.framework */; };
+		A26662F5940E1657638F3E2F1AC779A6 /* WKWebViewJavascriptBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 86AAB296ABB8C150C1288214C9FBC6A9 /* WKWebViewJavascriptBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3B1D706C1E4F50D60BED9784355BC61 /* YYClassInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 77BF06CE5C3D4692E768EA8D49DED7E9 /* YYClassInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7E487EEE301112C2274F1C471C9B023 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFBB440202E4B7F530FFD9BDAFCF3A9 /* Foundation.framework */; };
+		B002E8E7956B458F2372658819073AB2 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A0E0E3DF35AA56B5D0F5E411691FF55 /* WKWebViewJavascriptBridge.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B3B19B1599FD2EB6E305F57CC098731C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFBB440202E4B7F530FFD9BDAFCF3A9 /* Foundation.framework */; };
+		BD6B9E0ED5D1F5D30D2C30D56A17FA5E /* YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B105209B972F4EEE44FB06EBAD93734 /* YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C42FFA29EB9B2950728833D20A8A652D /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = E6DB1451AFCCF2B7F7ADEA61FE0C3EA3 /* WebViewJavascriptBridge.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E5229F5125ACD420659E7B2D19BB30A8 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FFDA252C285C2650CA391A9E3C67BB /* MBProgressHUD-dummy.m */; };
+		EA321C98029015AA4895C0B26891D8F8 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = A21E5FCAB2695905263D42D655244B95 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED3A3F61E4EA390B4BF6BD5352ED88A6 /* WebViewJavascriptBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = ED9F9BD2D8E26C7208812F9BB0119243 /* WebViewJavascriptBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFA7400900C57DC2746229FDF0467755 /* CHWebViewProress.h in Headers */ = {isa = PBXBuildFile; fileRef = D6C501B197658D409045AB4CC3D35AA7 /* CHWebViewProress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F074C521336E2D754C249C8F5D9E0203 /* WebViewJavascriptBridge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B716246874CBE6024A13875A852EDC63 /* WebViewJavascriptBridge-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		21A5DEC6D664CAAE51004D3C77601308 /* PBXContainerItemProxy */ = {
+		39461FF76255870125052BC35D030BE5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 586F2DFA9BDCC6675C2546793A69E5CC;
 			remoteInfo = MBProgressHUD;
 		};
-		F1DA655557DD0E89A593EA3AAC516EF3 /* PBXContainerItemProxy */ = {
+		3ADBDE13CE788A82D1B0EAE537CE1A30 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0CCCF3F36504A4579EAE11B0EDA4148C;
+			remoteGlobalIDString = B5189776839607E5A502ADCE30569BEB;
 			remoteInfo = WebViewJavascriptBridge;
+		};
+		7100FB94427D49E3186B8417F5328C6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F9A66838823F4120B7BD7C6D798C59E;
+			remoteInfo = CHWebView;
+		};
+		C61B434A3C986105B93872FEB09BF9C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B8ED454171018A33DD72925E6AB5324;
+			remoteInfo = YYModel;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		048416D429148CD975F1F1939F751476 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WebViewJavascriptBridge.m; path = WebViewJavascriptBridge/WebViewJavascriptBridge.m; sourceTree = "<group>"; };
-		0CD2FED39C236D556E80AB8D0877B786 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WebViewJavascriptBridge.h; path = WebViewJavascriptBridge/WebViewJavascriptBridge.h; sourceTree = "<group>"; };
-		128A9669E21CEB5F4AFDA25C34AADC14 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0068991EEBB1661A34C4624787624027 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		0911470C21174EB3C00171A4FEEBED1A /* NSObject+YYModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+YYModel.h"; path = "YYModel/NSObject+YYModel.h"; sourceTree = "<group>"; };
+		167588A3A7E1BEAE06C46FB6CDCDC44B /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		180115A2F37E73A18B1A05077A0A746E /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B105209B972F4EEE44FB06EBAD93734 /* YYModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYModel.h; path = YYModel/YYModel.h; sourceTree = "<group>"; };
+		1C9863DA5FC960273A485AF1FAD6AE7C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		283CC33C4F8C66971954ACF875CE619E /* Pods-TengleHappySchool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TengleHappySchool.debug.xcconfig"; sourceTree = "<group>"; };
-		2E244E4FA8E808A15D6ECA807CDC4CE2 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WebViewJavascriptBridgeBase.m; path = WebViewJavascriptBridge/WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
-		3292CC8DBF6352C2BF2B949CB548248F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		414A126CB863B0E904F5C45A617D176A /* libPods-TengleHappySchool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TengleHappySchool.a"; path = "libPods-TengleHappySchool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		433D61CEB062E707CFE47C7646010EB3 /* WebViewJavascriptBridge-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WebViewJavascriptBridge-prefix.pch"; sourceTree = "<group>"; };
-		444E824021344DCA9E9342578348F45F /* WebViewJavascriptBridge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WebViewJavascriptBridge-dummy.m"; sourceTree = "<group>"; };
-		4C09E64010D743E36417AD584E38C879 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
-		55F7379BB753C962EEB271B71BA2F60B /* WebViewJavascriptBridge.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WebViewJavascriptBridge.xcconfig; sourceTree = "<group>"; };
-		624C96F5074B946DE90813288ED6795A /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		2E6F8B27551FA6E18C5B4341AE755202 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		3339A1D5E494FFDCA683C0EDB63B3F37 /* CHWebView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CHWebView-prefix.pch"; sourceTree = "<group>"; };
+		3972A15207D4FD87C38182D4D1129EA3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		423676ED033690A0961123E375A04A54 /* libYYModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libYYModel.a; path = libYYModel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B19EB7954FF5D82826F4753D70ADB75 /* CHWebView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CHWebView.xcconfig; sourceTree = "<group>"; };
+		4CBAD0AF7DF4E718BC7E00E5AF05D92A /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WebViewJavascriptBridgeBase.h; path = WebViewJavascriptBridge/WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		563F6F7165F528F68255AECF545C713B /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WebViewJavascriptBridgeBase.m; path = WebViewJavascriptBridge/WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		56D9B129813A3013EDB41CF65B77E171 /* YYClassInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYClassInfo.m; path = YYModel/YYClassInfo.m; sourceTree = "<group>"; };
 		662146495971A291E2740AA3A1E82067 /* Pods-TengleHappySchool-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TengleHappySchool-resources.sh"; sourceTree = "<group>"; };
-		69CCF34323FC6DF995576685CE113905 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WKWebViewJavascriptBridge.h; path = WebViewJavascriptBridge/WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
-		84B1B32DF8E572D89ADC9E88101C3CEA /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		89EB4DDFE3E6CF852AD3324C56EFD47A /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		69C8081E6961D690AB056742AAFCB977 /* YYModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYModel-prefix.pch"; sourceTree = "<group>"; };
+		6A0E0E3DF35AA56B5D0F5E411691FF55 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WKWebViewJavascriptBridge.m; path = WebViewJavascriptBridge/WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		752E2DE290DAFED0186297AD6D8C2F80 /* WebViewJavascriptBridge.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WebViewJavascriptBridge.xcconfig; sourceTree = "<group>"; };
+		76D56CF20E7F01A2DF68FDF431CFDC97 /* CHWebProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CHWebProgressView.h; path = CHWebView/Progress/CHWebProgressView.h; sourceTree = "<group>"; };
+		77BF06CE5C3D4692E768EA8D49DED7E9 /* YYClassInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYClassInfo.h; path = YYModel/YYClassInfo.h; sourceTree = "<group>"; };
+		77D77AF7ADE5FD0F090FB36A74EE51C1 /* libCHWebView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCHWebView.a; path = libCHWebView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EFBB440202E4B7F530FFD9BDAFCF3A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		82A4259D49DFD0B949BB66A84F6A696C /* YYModel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YYModel.xcconfig; sourceTree = "<group>"; };
+		8546575AB40C5D521BAB140D87C39BAA /* WebViewJavascriptBridge-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WebViewJavascriptBridge-prefix.pch"; sourceTree = "<group>"; };
+		86AAB296ABB8C150C1288214C9FBC6A9 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WKWebViewJavascriptBridge.h; path = WebViewJavascriptBridge/WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96D38313B8216805C02A3115A01E055C /* Pods-TengleHappySchool-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TengleHappySchool-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9A8F9ADF911A63B4510169796FE3216B /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WebViewJavascriptBridge_JS.m; path = WebViewJavascriptBridge/WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		9C89B34B63F71B3DD80E816950E0A6F1 /* libPods-TengleHappySchool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TengleHappySchool.a"; path = "libPods-TengleHappySchool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D13AA9080D4DEE14A71F1A10287477E /* CHWebView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CHWebView-dummy.m"; sourceTree = "<group>"; };
 		A0648FA3C3CD935C3FA284A345EF2D5A /* Pods-TengleHappySchool-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TengleHappySchool-frameworks.sh"; sourceTree = "<group>"; };
-		C20DD6D75D42BFB77E7AAAA49DD53654 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WKWebViewJavascriptBridge.m; path = WebViewJavascriptBridge/WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		A21E5FCAB2695905263D42D655244B95 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		A383E6962A469A4B37206AAB8626F373 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		A6C93B811EB9D9DA71EEFE649D7CC8DC /* CHWebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CHWebViewController.m; path = CHWebView/Core/CHWebViewController.m; sourceTree = "<group>"; };
+		AD2E108A96816FE1C526325876F61E49 /* YYModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YYModel-dummy.m"; sourceTree = "<group>"; };
+		B6988A15E66A4901AF046694364986F5 /* CHWebViewProress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CHWebViewProress.m; path = CHWebView/Progress/CHWebViewProress.m; sourceTree = "<group>"; };
+		B716246874CBE6024A13875A852EDC63 /* WebViewJavascriptBridge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WebViewJavascriptBridge-dummy.m"; sourceTree = "<group>"; };
+		C1A9F7A7B93E224C95655E773C0BD101 /* libWebViewJavascriptBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libWebViewJavascriptBridge.a; path = libWebViewJavascriptBridge.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAE8E9DD76820786E1ACA729FC6DE1EB /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WebViewJavascriptBridge_JS.h; path = WebViewJavascriptBridge/WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		D31679DA033436993465B6FD5401F7F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D6C501B197658D409045AB4CC3D35AA7 /* CHWebViewProress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CHWebViewProress.h; path = CHWebView/Progress/CHWebViewProress.h; sourceTree = "<group>"; };
 		D97BB0A1DF47D7C2766E9B98E3F4E23A /* Pods-TengleHappySchool-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TengleHappySchool-acknowledgements.plist"; sourceTree = "<group>"; };
+		DAAD4541F824CF5127371E9478FA760B /* CHHtmlConverter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CHHtmlConverter.m; path = CHWebView/Core/CHHtmlConverter.m; sourceTree = "<group>"; };
 		E39E5C049260424D81542DD1061FB404 /* Pods-TengleHappySchool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TengleHappySchool.release.xcconfig"; sourceTree = "<group>"; };
-		E5F748DA8F98E61F788C3488D6BA25DD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		ECB56A22A987E846FF65248DA108CAD2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		ED28A1A3FA54BFB52FC9A9A98AE69979 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WebViewJavascriptBridge_JS.h; path = WebViewJavascriptBridge/WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
-		EE47C3C0A288B22565A6AE9BA5170C54 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WebViewJavascriptBridgeBase.h; path = WebViewJavascriptBridge/WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		E6DB1451AFCCF2B7F7ADEA61FE0C3EA3 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WebViewJavascriptBridge.m; path = WebViewJavascriptBridge/WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		EC5E42EC11F9A27051A17D93A53F07D1 /* CHHtmlConverter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CHHtmlConverter.h; path = CHWebView/Core/CHHtmlConverter.h; sourceTree = "<group>"; };
+		ECBA1563D08347E2A7C6385EFC066CDC /* NSObject+YYModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+YYModel.m"; path = "YYModel/NSObject+YYModel.m"; sourceTree = "<group>"; };
+		ED9F9BD2D8E26C7208812F9BB0119243 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WebViewJavascriptBridge.h; path = WebViewJavascriptBridge/WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		F0FFDA252C285C2650CA391A9E3C67BB /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		F4EA227EC946250378D3ACEFE125DAB9 /* Pods-TengleHappySchool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TengleHappySchool-dummy.m"; sourceTree = "<group>"; };
-		F6058B639C77833F86488BB614A82502 /* libWebViewJavascriptBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libWebViewJavascriptBridge.a; path = libWebViewJavascriptBridge.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB8A68DE5BEF31FA453D2E667151A93F /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		FDBA94A94B982885ECCA1662BE8CD7CF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F57EEEE0DBF07E33E8C85EBF42D1405F /* CHWebViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CHWebViewController.h; path = CHWebView/Core/CHWebViewController.h; sourceTree = "<group>"; };
+		FE5EA2168110B253A419533FB0BABDD3 /* CHWebProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CHWebProgressView.m; path = CHWebView/Progress/CHWebProgressView.m; sourceTree = "<group>"; };
+		FF05CC651A030AFD3D4122F73A59904E /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WebViewJavascriptBridge_JS.m; path = WebViewJavascriptBridge/WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		91F67109E5D63893E3A90ADD82A998C7 /* Frameworks */ = {
+		0A88AB4839483DFA77F512B48ACB99C3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51BB7982C67833F21F0C446E003F4C34 /* Foundation.framework in Frameworks */,
-				A9E72C97A26E9EC04A65C469D7B3BA4D /* UIKit.framework in Frameworks */,
+				6706DBD25E19E222D8B485C55D785CB0 /* CoreFoundation.framework in Frameworks */,
+				B3B19B1599FD2EB6E305F57CC098731C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EBD240ED0319560028DB77FBB1E5D289 /* Frameworks */ = {
+		0CBCF13EA007E925361DCF23CEBF145B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81CC59A3AC776210BE56292FA7B98960 /* Foundation.framework in Frameworks */,
+				A7E487EEE301112C2274F1C471C9B023 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D074EE3F84B5AC39922510AED51549F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ABF516BB8C47A107C1A3A42595C508F /* Foundation.framework in Frameworks */,
+				85864BE4034B53F999C760372E24AD7A /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C26805D6598285BB9C4A452C6C927E70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D37E2C506D88AA675FDD1926782136C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,40 +181,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
+		068DE5724F38BD2241D2EE697B21F753 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				8F8FEF3140598EAB2B3D56BB84B5389A /* iOS */,
+				A383E6962A469A4B37206AAB8626F373 /* CoreFoundation.framework */,
+				3972A15207D4FD87C38182D4D1129EA3 /* CoreGraphics.framework */,
+				7EFBB440202E4B7F530FFD9BDAFCF3A9 /* Foundation.framework */,
+				1C9863DA5FC960273A485AF1FAD6AE7C /* QuartzCore.framework */,
+				D31679DA033436993465B6FD5401F7F8 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		0CF5D885E2BC1245D22E04DF88CC069E /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				76D56CF20E7F01A2DF68FDF431CFDC97 /* CHWebProgressView.h */,
+				FE5EA2168110B253A419533FB0BABDD3 /* CHWebProgressView.m */,
+				D6C501B197658D409045AB4CC3D35AA7 /* CHWebViewProress.h */,
+				B6988A15E66A4901AF046694364986F5 /* CHWebViewProress.m */,
+			);
+			name = Progress;
+			sourceTree = "<group>";
+		};
+		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				068DE5724F38BD2241D2EE697B21F753 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		279CB95E93CF0DCE7BB619E2B7E5D090 /* WebViewJavascriptBridge */ = {
+		3C90A67E40C684D38DF4E9A5554AB223 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				0CD2FED39C236D556E80AB8D0877B786 /* WebViewJavascriptBridge.h */,
-				048416D429148CD975F1F1939F751476 /* WebViewJavascriptBridge.m */,
-				ED28A1A3FA54BFB52FC9A9A98AE69979 /* WebViewJavascriptBridge_JS.h */,
-				9A8F9ADF911A63B4510169796FE3216B /* WebViewJavascriptBridge_JS.m */,
-				EE47C3C0A288B22565A6AE9BA5170C54 /* WebViewJavascriptBridgeBase.h */,
-				2E244E4FA8E808A15D6ECA807CDC4CE2 /* WebViewJavascriptBridgeBase.m */,
-				69CCF34323FC6DF995576685CE113905 /* WKWebViewJavascriptBridge.h */,
-				C20DD6D75D42BFB77E7AAAA49DD53654 /* WKWebViewJavascriptBridge.m */,
-				35EB71A260ECC5E97357CCC1BD47A022 /* Support Files */,
+				EC5E42EC11F9A27051A17D93A53F07D1 /* CHHtmlConverter.h */,
+				DAAD4541F824CF5127371E9478FA760B /* CHHtmlConverter.m */,
+				F57EEEE0DBF07E33E8C85EBF42D1405F /* CHWebViewController.h */,
+				A6C93B811EB9D9DA71EEFE649D7CC8DC /* CHWebViewController.m */,
 			);
-			name = WebViewJavascriptBridge;
-			path = WebViewJavascriptBridge;
+			name = Core;
 			sourceTree = "<group>";
 		};
-		35EB71A260ECC5E97357CCC1BD47A022 /* Support Files */ = {
+		46A2763264A4EC21B0C57776736766D2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				55F7379BB753C962EEB271B71BA2F60B /* WebViewJavascriptBridge.xcconfig */,
-				444E824021344DCA9E9342578348F45F /* WebViewJavascriptBridge-dummy.m */,
-				433D61CEB062E707CFE47C7646010EB3 /* WebViewJavascriptBridge-prefix.pch */,
+				4B19EB7954FF5D82826F4753D70ADB75 /* CHWebView.xcconfig */,
+				9D13AA9080D4DEE14A71F1A10287477E /* CHWebView-dummy.m */,
+				3339A1D5E494FFDCA683C0EDB63B3F37 /* CHWebView-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/WebViewJavascriptBridge";
+			path = "../Target Support Files/CHWebView";
+			sourceTree = "<group>";
+		};
+		4AC6FEBB8B319EA8F42B485399BC0DE8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				82A4259D49DFD0B949BB66A84F6A696C /* YYModel.xcconfig */,
+				AD2E108A96816FE1C526325876F61E49 /* YYModel-dummy.m */,
+				69C8081E6961D690AB056742AAFCB977 /* YYModel-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/YYModel";
+			sourceTree = "<group>";
+		};
+		59EA7E11CB7BE840067155626FEC8FA8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E6F8B27551FA6E18C5B4341AE755202 /* MBProgressHUD.xcconfig */,
+				F0FFDA252C285C2650CA391A9E3C67BB /* MBProgressHUD-dummy.m */,
+				0068991EEBB1661A34C4624787624027 /* MBProgressHUD-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MBProgressHUD";
 			sourceTree = "<group>";
 		};
 		5F4FF7DB7FB9D38202C59523EDD19FD8 /* Targets Support Files */ = {
@@ -154,47 +264,80 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		608303EA2BCAB97138945738102FFA3F /* Products */ = {
+		690A52FD418A443BFF545066B11BCB1B /* WebViewJavascriptBridge */ = {
 			isa = PBXGroup;
 			children = (
-				128A9669E21CEB5F4AFDA25C34AADC14 /* libMBProgressHUD.a */,
-				414A126CB863B0E904F5C45A617D176A /* libPods-TengleHappySchool.a */,
-				F6058B639C77833F86488BB614A82502 /* libWebViewJavascriptBridge.a */,
+				ED9F9BD2D8E26C7208812F9BB0119243 /* WebViewJavascriptBridge.h */,
+				E6DB1451AFCCF2B7F7ADEA61FE0C3EA3 /* WebViewJavascriptBridge.m */,
+				CAE8E9DD76820786E1ACA729FC6DE1EB /* WebViewJavascriptBridge_JS.h */,
+				FF05CC651A030AFD3D4122F73A59904E /* WebViewJavascriptBridge_JS.m */,
+				4CBAD0AF7DF4E718BC7E00E5AF05D92A /* WebViewJavascriptBridgeBase.h */,
+				563F6F7165F528F68255AECF545C713B /* WebViewJavascriptBridgeBase.m */,
+				86AAB296ABB8C150C1288214C9FBC6A9 /* WKWebViewJavascriptBridge.h */,
+				6A0E0E3DF35AA56B5D0F5E411691FF55 /* WKWebViewJavascriptBridge.m */,
+				BE82A8B84136D850D2D098F2D71A2862 /* Support Files */,
 			);
-			name = Products;
+			name = WebViewJavascriptBridge;
+			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
+		724FDCDD7D75589CCFC7DCD43B2D5918 /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				0911470C21174EB3C00171A4FEEBED1A /* NSObject+YYModel.h */,
+				ECBA1563D08347E2A7C6385EFC066CDC /* NSObject+YYModel.m */,
+				77BF06CE5C3D4692E768EA8D49DED7E9 /* YYClassInfo.h */,
+				56D9B129813A3013EDB41CF65B77E171 /* YYClassInfo.m */,
+				1B105209B972F4EEE44FB06EBAD93734 /* YYModel.h */,
+				4AC6FEBB8B319EA8F42B485399BC0DE8 /* Support Files */,
+			);
+			name = YYModel;
+			path = YYModel;
+			sourceTree = "<group>";
+		};
+		72B3F5162F0C856D9D7DC770F9ABE9EB /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				A21E5FCAB2695905263D42D655244B95 /* MBProgressHUD.h */,
+				167588A3A7E1BEAE06C46FB6CDCDC44B /* MBProgressHUD.m */,
+				59EA7E11CB7BE840067155626FEC8FA8 /* Support Files */,
+			);
+			name = MBProgressHUD;
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
-				CBCF6238A3F082FF79665E9A5230978E /* Pods */,
-				608303EA2BCAB97138945738102FFA3F /* Products */,
+				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
+				82CF368365417D1A14E4BA6C29246C18 /* Pods */,
+				7DE29E4EE68ABF381BBA2C5CA773A0EC /* Products */,
 				5F4FF7DB7FB9D38202C59523EDD19FD8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8F8FEF3140598EAB2B3D56BB84B5389A /* iOS */ = {
+		7DE29E4EE68ABF381BBA2C5CA773A0EC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3292CC8DBF6352C2BF2B949CB548248F /* CoreGraphics.framework */,
-				ECB56A22A987E846FF65248DA108CAD2 /* Foundation.framework */,
-				E5F748DA8F98E61F788C3488D6BA25DD /* QuartzCore.framework */,
-				FDBA94A94B982885ECCA1662BE8CD7CF /* UIKit.framework */,
+				77D77AF7ADE5FD0F090FB36A74EE51C1 /* libCHWebView.a */,
+				180115A2F37E73A18B1A05077A0A746E /* libMBProgressHUD.a */,
+				9C89B34B63F71B3DD80E816950E0A6F1 /* libPods-TengleHappySchool.a */,
+				C1A9F7A7B93E224C95655E773C0BD101 /* libWebViewJavascriptBridge.a */,
+				423676ED033690A0961123E375A04A54 /* libYYModel.a */,
 			);
-			name = iOS;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		9418E029569D43311649E05A3E2F4BA3 /* Support Files */ = {
+		82CF368365417D1A14E4BA6C29246C18 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4C09E64010D743E36417AD584E38C879 /* MBProgressHUD.xcconfig */,
-				624C96F5074B946DE90813288ED6795A /* MBProgressHUD-dummy.m */,
-				84B1B32DF8E572D89ADC9E88101C3CEA /* MBProgressHUD-prefix.pch */,
+				DEDCFF2C5F8EA751FF2C50749AD64D7D /* CHWebView */,
+				72B3F5162F0C856D9D7DC770F9ABE9EB /* MBProgressHUD */,
+				690A52FD418A443BFF545066B11BCB1B /* WebViewJavascriptBridge */,
+				724FDCDD7D75589CCFC7DCD43B2D5918 /* YYModel */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MBProgressHUD";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		BCA21934089DEA1A0AF60C2C4F505325 /* Pods-TengleHappySchool */ = {
@@ -212,24 +355,26 @@
 			path = "Target Support Files/Pods-TengleHappySchool";
 			sourceTree = "<group>";
 		};
-		CBCF6238A3F082FF79665E9A5230978E /* Pods */ = {
+		BE82A8B84136D850D2D098F2D71A2862 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E11346AD30BCCDC57D135926C4D5622F /* MBProgressHUD */,
-				279CB95E93CF0DCE7BB619E2B7E5D090 /* WebViewJavascriptBridge */,
+				752E2DE290DAFED0186297AD6D8C2F80 /* WebViewJavascriptBridge.xcconfig */,
+				B716246874CBE6024A13875A852EDC63 /* WebViewJavascriptBridge-dummy.m */,
+				8546575AB40C5D521BAB140D87C39BAA /* WebViewJavascriptBridge-prefix.pch */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/WebViewJavascriptBridge";
 			sourceTree = "<group>";
 		};
-		E11346AD30BCCDC57D135926C4D5622F /* MBProgressHUD */ = {
+		DEDCFF2C5F8EA751FF2C50749AD64D7D /* CHWebView */ = {
 			isa = PBXGroup;
 			children = (
-				89EB4DDFE3E6CF852AD3324C56EFD47A /* MBProgressHUD.h */,
-				FB8A68DE5BEF31FA453D2E667151A93F /* MBProgressHUD.m */,
-				9418E029569D43311649E05A3E2F4BA3 /* Support Files */,
+				3C90A67E40C684D38DF4E9A5554AB223 /* Core */,
+				0CF5D885E2BC1245D22E04DF88CC069E /* Progress */,
+				46A2763264A4EC21B0C57776736766D2 /* Support Files */,
 			);
-			name = MBProgressHUD;
-			path = MBProgressHUD;
+			name = CHWebView;
+			path = CHWebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,37 +388,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		607F6930B73CC32C1EF9285F12849697 /* Headers */ = {
+		3D1556842BCE76E60FF888FA052C2AE7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4010B992F3B4B1BD36850C9F2140A36C /* WebViewJavascriptBridge.h in Headers */,
-				1758C5E097991B0303DDFDE84E53B9A0 /* WebViewJavascriptBridge_JS.h in Headers */,
-				09AD1BA36F5A8F50B0059E48B747C84C /* WebViewJavascriptBridgeBase.h in Headers */,
-				C8F58A3A3B2B07EE29150E7F3CFC4BB7 /* WKWebViewJavascriptBridge.h in Headers */,
+				ED3A3F61E4EA390B4BF6BD5352ED88A6 /* WebViewJavascriptBridge.h in Headers */,
+				465177061E3B9651AD4D6FD68E22A6D0 /* WebViewJavascriptBridge_JS.h in Headers */,
+				1AFC4F880CDBDC75933A04E0164D2177 /* WebViewJavascriptBridgeBase.h in Headers */,
+				A26662F5940E1657638F3E2F1AC779A6 /* WKWebViewJavascriptBridge.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0EAA4D2289F72EBEF272D686F0077DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				578655C2B8273C9A614444ED8CE737EA /* CHHtmlConverter.h in Headers */,
+				5F384B971F56706225A66051857DD615 /* CHWebProgressView.h in Headers */,
+				2EFA411364E931F13693D28BC92660C0 /* CHWebViewController.h in Headers */,
+				EFA7400900C57DC2746229FDF0467755 /* CHWebViewProress.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEA2673CF16CBA82A539994DF056D445 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C1AF5AAAE4C0F8204A2D47DBB413A97 /* NSObject+YYModel.h in Headers */,
+				A3B1D706C1E4F50D60BED9784355BC61 /* YYClassInfo.h in Headers */,
+				BD6B9E0ED5D1F5D30D2C30D56A17FA5E /* YYModel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0CCCF3F36504A4579EAE11B0EDA4148C /* WebViewJavascriptBridge */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E5DB7ED5AEFAC3CFDA1CB7F8B8817463 /* Build configuration list for PBXNativeTarget "WebViewJavascriptBridge" */;
-			buildPhases = (
-				19210566218C0180593E736F790D9533 /* Sources */,
-				91F67109E5D63893E3A90ADD82A998C7 /* Frameworks */,
-				607F6930B73CC32C1EF9285F12849697 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = WebViewJavascriptBridge;
-			productName = WebViewJavascriptBridge;
-			productReference = F6058B639C77833F86488BB614A82502 /* libWebViewJavascriptBridge.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		586F2DFA9BDCC6675C2546793A69E5CC /* MBProgressHUD */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B44251FA50022CA55D4B2FBE1468C76 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
@@ -288,25 +437,78 @@
 			);
 			name = MBProgressHUD;
 			productName = MBProgressHUD;
-			productReference = 128A9669E21CEB5F4AFDA25C34AADC14 /* libMBProgressHUD.a */;
+			productReference = 180115A2F37E73A18B1A05077A0A746E /* libMBProgressHUD.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		ECDFB98F49B8EC60D3296A6A6C267DE4 /* Pods-TengleHappySchool */ = {
+		5F9A66838823F4120B7BD7C6D798C59E /* CHWebView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB58AA577F07844DF6CDE07D3AE9B5B3 /* Build configuration list for PBXNativeTarget "Pods-TengleHappySchool" */;
+			buildConfigurationList = 2AD3DE1094C163A294ECA71BD1B7FAC5 /* Build configuration list for PBXNativeTarget "CHWebView" */;
 			buildPhases = (
-				2BF384E2B2739990A08C4FEB569B09A2 /* Sources */,
-				EBD240ED0319560028DB77FBB1E5D289 /* Frameworks */,
+				219FE8024863B80AFE35EDD7EC221306 /* Sources */,
+				0CBCF13EA007E925361DCF23CEBF145B /* Frameworks */,
+				A0EAA4D2289F72EBEF272D686F0077DF /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3BB8933DCCCDF409F3778E2E5130B65F /* PBXTargetDependency */,
-				E9E4A6B1D690DB9D48DEA86AC7686D76 /* PBXTargetDependency */,
+			);
+			name = CHWebView;
+			productName = CHWebView;
+			productReference = 77D77AF7ADE5FD0F090FB36A74EE51C1 /* libCHWebView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6B8ED454171018A33DD72925E6AB5324 /* YYModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CAE4525C60CD8B2DE8C427F748EE5AF /* Build configuration list for PBXNativeTarget "YYModel" */;
+			buildPhases = (
+				1BD7C5446729254C21F1FB88BA06EB48 /* Sources */,
+				0A88AB4839483DFA77F512B48ACB99C3 /* Frameworks */,
+				EEA2673CF16CBA82A539994DF056D445 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YYModel;
+			productName = YYModel;
+			productReference = 423676ED033690A0961123E375A04A54 /* libYYModel.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B5189776839607E5A502ADCE30569BEB /* WebViewJavascriptBridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27B3C8F9A05D62368B058A5C417BB563 /* Build configuration list for PBXNativeTarget "WebViewJavascriptBridge" */;
+			buildPhases = (
+				C0536A1E4669785EE4752A4CE22BADF6 /* Sources */,
+				2D074EE3F84B5AC39922510AED51549F /* Frameworks */,
+				3D1556842BCE76E60FF888FA052C2AE7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebViewJavascriptBridge;
+			productName = WebViewJavascriptBridge;
+			productReference = C1A9F7A7B93E224C95655E773C0BD101 /* libWebViewJavascriptBridge.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DA991C6C58748A8A8D033CED95F1D51A /* Pods-TengleHappySchool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA2EBD85EC18AA80FB26B12E22AB2AD2 /* Build configuration list for PBXNativeTarget "Pods-TengleHappySchool" */;
+			buildPhases = (
+				59E601CDDD6DA310B92647AF3A8471F6 /* Sources */,
+				C26805D6598285BB9C4A452C6C927E70 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6D485B24C417A70AA1C37DFE3F5BC10 /* PBXTargetDependency */,
+				458F1D4040274C4DE30543D0DC36BDD4 /* PBXTargetDependency */,
+				21990838F29A06CDCF3616483FA63644 /* PBXTargetDependency */,
+				C4311E72A85D4F7EEB395281DEEEF6BE /* PBXTargetDependency */,
 			);
 			name = "Pods-TengleHappySchool";
 			productName = "Pods-TengleHappySchool";
-			productReference = 414A126CB863B0E904F5C45A617D176A /* libPods-TengleHappySchool.a */;
+			productReference = 9C89B34B63F71B3DD80E816950E0A6F1 /* libPods-TengleHappySchool.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -326,35 +528,47 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 608303EA2BCAB97138945738102FFA3F /* Products */;
+			productRefGroup = 7DE29E4EE68ABF381BBA2C5CA773A0EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				5F9A66838823F4120B7BD7C6D798C59E /* CHWebView */,
 				586F2DFA9BDCC6675C2546793A69E5CC /* MBProgressHUD */,
-				ECDFB98F49B8EC60D3296A6A6C267DE4 /* Pods-TengleHappySchool */,
-				0CCCF3F36504A4579EAE11B0EDA4148C /* WebViewJavascriptBridge */,
+				DA991C6C58748A8A8D033CED95F1D51A /* Pods-TengleHappySchool */,
+				B5189776839607E5A502ADCE30569BEB /* WebViewJavascriptBridge */,
+				6B8ED454171018A33DD72925E6AB5324 /* YYModel */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		19210566218C0180593E736F790D9533 /* Sources */ = {
+		1BD7C5446729254C21F1FB88BA06EB48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC0BDF0C88EC3716A521457FB02B0DB2 /* WebViewJavascriptBridge-dummy.m in Sources */,
-				D1B5F25F426722E08367BC75B4A437A0 /* WebViewJavascriptBridge.m in Sources */,
-				85F00EDE39B0E6FA373EE54CFDB01F0B /* WebViewJavascriptBridge_JS.m in Sources */,
-				4F34E166FEE3FF6D6DEF7A24FA382F81 /* WebViewJavascriptBridgeBase.m in Sources */,
-				2FCF4150C6820DB4D29912BC903B4F44 /* WKWebViewJavascriptBridge.m in Sources */,
+				47FF42E2C6D5D23721602EB84852825E /* NSObject+YYModel.m in Sources */,
+				455C8DD7C4AFAB4085CB34734FF13A98 /* YYClassInfo.m in Sources */,
+				677F5CDFFB342456E4BACE47F0891CC6 /* YYModel-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2BF384E2B2739990A08C4FEB569B09A2 /* Sources */ = {
+		219FE8024863B80AFE35EDD7EC221306 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CE36B2A7F7888ED6472361E687E5A37 /* Pods-TengleHappySchool-dummy.m in Sources */,
+				618C4947F5719D1A06F416AD813B5258 /* CHHtmlConverter.m in Sources */,
+				97256875A05071C3B9E940ABB6D40130 /* CHWebProgressView.m in Sources */,
+				36146D08F7F1558FB6DBA1E843C490D4 /* CHWebView-dummy.m in Sources */,
+				93DC4138FDE40B215671D7AC3A22C937 /* CHWebViewController.m in Sources */,
+				23BB92B119EEB350F546F4D7420E526F /* CHWebViewProress.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59E601CDDD6DA310B92647AF3A8471F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F67A828012C66B6EB2AF8C0532016D6 /* Pods-TengleHappySchool-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,27 +581,74 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0536A1E4669785EE4752A4CE22BADF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F074C521336E2D754C249C8F5D9E0203 /* WebViewJavascriptBridge-dummy.m in Sources */,
+				C42FFA29EB9B2950728833D20A8A652D /* WebViewJavascriptBridge.m in Sources */,
+				39496BE77ECE784D1DED096E2D2B8CF9 /* WebViewJavascriptBridge_JS.m in Sources */,
+				8A1905A9EBDCEEE1D1FCB31965A5678C /* WebViewJavascriptBridgeBase.m in Sources */,
+				B002E8E7956B458F2372658819073AB2 /* WKWebViewJavascriptBridge.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3BB8933DCCCDF409F3778E2E5130B65F /* PBXTargetDependency */ = {
+		21990838F29A06CDCF3616483FA63644 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WebViewJavascriptBridge;
+			target = B5189776839607E5A502ADCE30569BEB /* WebViewJavascriptBridge */;
+			targetProxy = 3ADBDE13CE788A82D1B0EAE537CE1A30 /* PBXContainerItemProxy */;
+		};
+		458F1D4040274C4DE30543D0DC36BDD4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MBProgressHUD;
 			target = 586F2DFA9BDCC6675C2546793A69E5CC /* MBProgressHUD */;
-			targetProxy = 21A5DEC6D664CAAE51004D3C77601308 /* PBXContainerItemProxy */;
+			targetProxy = 39461FF76255870125052BC35D030BE5 /* PBXContainerItemProxy */;
 		};
-		E9E4A6B1D690DB9D48DEA86AC7686D76 /* PBXTargetDependency */ = {
+		C4311E72A85D4F7EEB395281DEEEF6BE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = WebViewJavascriptBridge;
-			target = 0CCCF3F36504A4579EAE11B0EDA4148C /* WebViewJavascriptBridge */;
-			targetProxy = F1DA655557DD0E89A593EA3AAC516EF3 /* PBXContainerItemProxy */;
+			name = YYModel;
+			target = 6B8ED454171018A33DD72925E6AB5324 /* YYModel */;
+			targetProxy = C61B434A3C986105B93872FEB09BF9C8 /* PBXContainerItemProxy */;
+		};
+		D6D485B24C417A70AA1C37DFE3F5BC10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CHWebView;
+			target = 5F9A66838823F4120B7BD7C6D798C59E /* CHWebView */;
+			targetProxy = 7100FB94427D49E3186B8417F5328C6F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		00FBA786218D5169F01E235AF23D15C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82A4259D49DFD0B949BB66A84F6A696C /* YYModel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/YYModel/YYModel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		2D6505E4F84AB187E42E7D1F17C02FC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C09E64010D743E36417AD584E38C879 /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = 2E6F8B27551FA6E18C5B4341AE755202 /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -407,6 +668,29 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
+		};
+		327EE98D70F90C332434467327937D94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 752E2DE290DAFED0186297AD6D8C2F80 /* WebViewJavascriptBridge.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/WebViewJavascriptBridge/WebViewJavascriptBridge-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 		3890D7C92DE120C2BA762135796CFA80 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -451,52 +735,6 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
-		};
-		3A9B93A8E99277C47FBADB8D37F3721F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55F7379BB753C962EEB271B71BA2F60B /* WebViewJavascriptBridge.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/WebViewJavascriptBridge/WebViewJavascriptBridge-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		52A1035B265C9C60041DEEADA3604FC0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55F7379BB753C962EEB271B71BA2F60B /* WebViewJavascriptBridge.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/WebViewJavascriptBridge/WebViewJavascriptBridge-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
 		};
 		587B8ECC28E3A9FF4796C121925DC113 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -546,7 +784,30 @@
 			};
 			name = Debug;
 		};
-		80556E5C54AD9B0102FEDBA401654E0D /* Release */ = {
+		81D27BBFE39221A11085CC94C71E9978 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E6F8B27551FA6E18C5B4341AE755202 /* MBProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9CDA64BFD79B672CFD754F1B2283A3DC /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E39E5C049260424D81542DD1061FB404 /* Pods-TengleHappySchool.release.xcconfig */;
 			buildSettings = {
@@ -569,30 +830,7 @@
 			};
 			name = Release;
 		};
-		81D27BBFE39221A11085CC94C71E9978 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C09E64010D743E36417AD584E38C879 /* MBProgressHUD.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		B94C0E17637EBEFBEF8A3687BEFB60AB /* Debug */ = {
+		BD8F19C96FBFF2858CD3B016204D18A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 283CC33C4F8C66971954ACF875CE619E /* Pods-TengleHappySchool.debug.xcconfig */;
 			buildSettings = {
@@ -615,9 +853,119 @@
 			};
 			name = Debug;
 		};
+		C99461CEDB3E4B6DCDCA31BB7A8E88C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B19EB7954FF5D82826F4753D70ADB75 /* CHWebView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CHWebView/CHWebView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C9C3264836BEA3A811A5D208444BC5AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82A4259D49DFD0B949BB66A84F6A696C /* YYModel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/YYModel/YYModel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D703E1BCA78FFB1DE906F9A38ED3D3BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 752E2DE290DAFED0186297AD6D8C2F80 /* WebViewJavascriptBridge.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/WebViewJavascriptBridge/WebViewJavascriptBridge-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E63887C5547A396B8097A8BC81BCBEF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B19EB7954FF5D82826F4753D70ADB75 /* CHWebView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CHWebView/CHWebView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		27B3C8F9A05D62368B058A5C417BB563 /* Build configuration list for PBXNativeTarget "WebViewJavascriptBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D703E1BCA78FFB1DE906F9A38ED3D3BC /* Debug */,
+				327EE98D70F90C332434467327937D94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2AD3DE1094C163A294ECA71BD1B7FAC5 /* Build configuration list for PBXNativeTarget "CHWebView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C99461CEDB3E4B6DCDCA31BB7A8E88C7 /* Debug */,
+				E63887C5547A396B8097A8BC81BCBEF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -636,20 +984,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E5DB7ED5AEFAC3CFDA1CB7F8B8817463 /* Build configuration list for PBXNativeTarget "WebViewJavascriptBridge" */ = {
+		9CAE4525C60CD8B2DE8C427F748EE5AF /* Build configuration list for PBXNativeTarget "YYModel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				52A1035B265C9C60041DEEADA3604FC0 /* Debug */,
-				3A9B93A8E99277C47FBADB8D37F3721F /* Release */,
+				00FBA786218D5169F01E235AF23D15C8 /* Debug */,
+				C9C3264836BEA3A811A5D208444BC5AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB58AA577F07844DF6CDE07D3AE9B5B3 /* Build configuration list for PBXNativeTarget "Pods-TengleHappySchool" */ = {
+		AA2EBD85EC18AA80FB26B12E22AB2AD2 /* Build configuration list for PBXNativeTarget "Pods-TengleHappySchool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B94C0E17637EBEFBEF8A3687BEFB60AB /* Debug */,
-				80556E5C54AD9B0102FEDBA401654E0D /* Release */,
+				BD8F19C96FBFF2858CD3B016204D18A3 /* Debug */,
+				9CDA64BFD79B672CFD754F1B2283A3DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

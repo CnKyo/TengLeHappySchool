@@ -8,10 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class body;
 @interface MWModel : NSObject
 
-@property (strong,nonatomic) NSString *mId;
-@property (strong,nonatomic) NSString *mName;
+@property (strong,nonatomic) body *body;
 
+@end
+
+@interface body : NSObject
+
+@property (strong,nonatomic) NSString *id;
+@property (strong,nonatomic) NSString *name;
 
 @end
