@@ -443,10 +443,10 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
         //适应你设定的尺寸
         [_wkWebView sizeToFit];
         
-        [WebViewJavascriptBridge enableLogging];
-        
-        _bridge = [WebViewJavascriptBridge bridgeForWebView:_wkWebView];
-        [_bridge setWebViewDelegate:self];
+//        [WebViewJavascriptBridge enableLogging];
+//        
+//        _bridge = [WebViewJavascriptBridge bridgeForWebView:_wkWebView];
+//        [_bridge setWebViewDelegate:self];
 
         
         
