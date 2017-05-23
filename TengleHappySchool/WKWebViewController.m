@@ -41,6 +41,8 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 //关闭按钮
 @property (nonatomic)UIBarButtonItem* closeButtonItem;
 
+@property WebViewJavascriptBridge* bridge;
+
 @end
 
 @implementation WKWebViewController
@@ -64,7 +66,9 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
+    if (_bridge) {
+        return;
+    }
     if (_isNavHidden == YES) {
         self.navigationController.navigationBarHidden = YES;
         //创建一个高20的假状态栏
@@ -438,6 +442,15 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
         // 设置 可以前进 和 后退
         //适应你设定的尺寸
         [_wkWebView sizeToFit];
+        
+        [WebViewJavascriptBridge enableLogging];
+        
+        _bridge = [WebViewJavascriptBridge bridgeForWebView:_wkWebView];
+        [_bridge setWebViewDelegate:self];
+
+        
+        
+        
     }
     return _wkWebView;
 }
