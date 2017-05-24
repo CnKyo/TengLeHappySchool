@@ -14,3 +14,21 @@
 @implementation body
 
 @end
+
+@implementation MWAppConfig
+
+@end
+
+@implementation MWWindow
+
+@end
+
+@implementation MWTabBar
++ (NSDictionary *)modelContainerPropertyGenericClass{
+    return @{@"list":[MWTabList class]};
+}
+@end
+
+@implementation MWTabList
+
+@end

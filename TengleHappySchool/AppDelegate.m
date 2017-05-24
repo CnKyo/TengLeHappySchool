@@ -8,32 +8,68 @@
 
 #import "AppDelegate.h"
 #import "WKHeader.h"
+#import "MWWebViewController.h"
+#import "MWTabViewController.h"
+
+@class MWUtil;
+@class MWAppConfig;
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
-- (void)iniLib{
+{
+    MWAppConfig *mAPPConfig;
+}
+- (void)appInit{
     
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setBarTintColor:M_CO];
+    NSDictionary *config = [MWUtil MWCurrentJsonConfigration:@"app" ofType:@"json"];
+    mAPPConfig = [MWAppConfig yy_modelWithJSON:config];
+    if ([MWUtil MWFirstLaunchApp]) {
+        MLLog(@"第一次启动");
+        [mAPPConfig saveToDB];
+
+    }else{
+        MLLog(@"已经启动过");
+    }
+    
+    NSMutableArray *mArr = [NSMutableArray new];
+    mArr = [MWAppConfig searchWithWhere:nil];
+    
+    [self tabbarInit];
+
+
+//    [[UINavigationBar appearance] setTintColor:[MWUtil MWColorWithHexString:mAPPConfig.window.navigationBarBackgroundColor]];
+//    [[UINavigationBar appearance] setBarTintColor:[MWUtil MWColorWithHexString:mAPPConfig.window.backgroundColor]];
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                                                            [UIColor whiteColor], NSForegroundColorAttributeName, [UIFont systemFontOfSize:21], NSFontAttributeName, nil]];
     
     
-    
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    if ([mAPPConfig.window.backgroundTextStyle isEqualToString:@"light"]) {
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    }else{
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    }
     
     
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
                                                          forBarMetrics:UIBarMetricsDefault];
     
-
+    
+    
 }
+- (void)tabbarInit{
+
+    
+    //设置窗口的根控制器
+    self.window.rootViewController = [[MWTabViewController alloc] init];
+    //显示窗口
+    [self.window makeKeyAndVisible];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [self iniLib];
+    [self appInit];
     return YES;
 }
 

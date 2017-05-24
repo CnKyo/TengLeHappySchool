@@ -12,6 +12,11 @@
 #import <WebViewJavascriptBridge.h>
 #import <YYModel.h>
 #import <JavaScriptCore/JavaScriptCore.h>
+#import "MWModel.h"
+#import <LKDBHelper.h>
+#import <UIImageView+WebCache.h>
+//#import <NSObject+LKDBHelper.h>
+
 //#define  WKSyncQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 
 #define ColorRGB(_R_, _G_, _B_)       ([UIColor colorWithRed:_R_/255.0f green:_G_/255.0f blue:_B_/255.0f alpha:1])
@@ -29,7 +34,7 @@
 
 
 #define M_CO    [UIColor colorWithRed:65/255.0f green:149/255.0f blue:220/255.0f alpha:1.00]
-
+#define MWHexColor(hexColor) ([UIColor colorWithHexhexColor alpha1])
 #define VERSION [[UIDevice currentDevice].systemVersion doubleValue]
 
 #define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
@@ -106,6 +111,8 @@ static NSString* const  kAFAppDotNetApiServiceURLString     = @"/api/app/service
 static NSString* const  kAFAppDotNetImgBaseURLString        = @"http://resource.china-cr.com/resource";
 
 
+static int const  KAppConfig                       = 1000;     ///app配置缓存
+
 
 
 static inline NSString *StringWithInteger(NSInteger _Value_)
@@ -125,42 +132,6 @@ static inline NSString *StringWithDouble(double _Value_)
     return [NSString stringWithFormat:@"%.2f",_Value_];
 }
 
-typedef enum {
-    kTableNote_Nothing,//空
-    kTableNote_NoData,//无数据
-    kTableNote_ConError,//链接错误
-    kTableNote_ConErrorTimedOut,//链接超时错误
-    kTableNote_UpdateError,//下载错误
-    kTableNote_UpdateOK,//下载成功
-    kTableNote_NoRecord,//暂无记录
-} kTableNoteType;
-
-///列表刷新状态
-typedef NS_ENUM(int,UITableViewRefreshStatus){
-    UITableViewHeaderRefreshing = 1,///头部刷新
-    UITableViewFooterRefreshing = 2,///底部刷新
-};
-
-///自定义弹出框样式
-typedef NS_ENUM(NSInteger,WKCustomPopViewType) {
-    WKCustomPopViewSucess = 1,///成功
-    WKCustomPopViewError = 2,///失败
-    WKCustomPopViewHaveCloseBtn = 3,///有关闭按钮
-    WKCustomPopViewHaveTwoBtn = 4,///有2个按钮
-    
-};
-///编辑用户信息按钮点击类型
-typedef NS_ENUM(NSInteger,WKEditUserInfoClicked) {
-
-    WKEditUserInfoAvatorClick = 1,///头像
-    WKEditUserInfoUsernameClick = 2,///用户名
-    WKEditUserInfoPhoneClick = 3,///电话号码
-    WKEditUserInfoRealnameClick = 4,///真实姓名
-    WKEditUserInfoUsercodeClick = 5,///证件号
-    WKEditUserInfoChangePwdClick = 6,///修改密码
-    WKEditUserInfoLogoutClick = 7,///退出登录
-    
-};
 
 ///联系我们or帮助中心
 typedef NS_ENUM(NSInteger,WKConnectUsOrHelpCenterType) {

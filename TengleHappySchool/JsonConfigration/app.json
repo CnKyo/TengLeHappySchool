@@ -1,0 +1,81 @@
+{
+    "pages":[
+             "pages/activity/index",
+             "pages/activity/activity_detail/index",
+             "pages/register/register",
+             "pages/login/login/login",
+             "pages/login/code_login/code_login",
+             "pages/discover/play_games/index",
+             "pages/discover/index",
+             "pages/mission/mission_fail/index",
+             "pages/mission/mission_succ/index",
+             "pages/mission/mission_detail/index",
+             "pages/mission/index",
+             "pages/gold/buy_succ/index",
+             "pages/gold/index",
+             "pages/advert/index",
+             "pages/member/daifu_demand/index",
+             "pages/member/daifu_succ/index",
+             "pages/member/buy_succ/index",
+             "pages/member/order/index",
+             "pages/member/index",
+             "pages/no_wifi/index",
+             "pages/xiyi/xy_working/index",
+             "pages/xiyi/xy_washing/index",
+             "pages/xiyi/my_yy/index",
+             "pages/xiyi/yy_fail/index",
+             "pages/xiyi/pay_succ/index",
+             "pages/xiyi/confirm_pay/index",
+             "pages/xiyi/xy_type/index",
+             "pages/xiyi/location/index",
+             "pages/index/index",
+             "pages/xiyi/index",
+             "pages/logs/logs"
+             ],
+    "window":{
+        "backgroundTextStyle":"light",
+        "navigationBarBackgroundColor": "#4194f0",
+        "navigationBarTitleText": "乐校园",
+        "backgroundColor":"#f4f7fe",
+        "navigationBarTextStyle":"#FFF"
+    },
+    "tabBar": {
+        "color": "#6e6d6b",
+        "selectedColor": "#6e6d6b",
+        "borderStyle": "white",
+        "backgroundColor": "#fff",
+        "list": [
+                 {
+                 "pagePath": "pages/index/index",
+                 "iconPath": "images/le02.png",
+                 "selectedIconPath": "images/le01.png",
+                 "text": "首页"
+                 },
+                 {
+                 "pagePath": "pages/mission/index",
+                 "iconPath": "images/renwu02.png",
+                 "selectedIconPath": "images/renwu01.png",
+                 "text": "任务"
+                 },
+                 {
+                 "pagePath": "pages/activity/index",
+                 "iconPath": "images/huodong02.png",
+                 "selectedIconPath": "images/huodong01.png",
+                 "text": "活动"
+                 },
+                 {
+                 "pagePath": "pages/discover/index",
+                 "iconPath": "images/faxian02.png",
+                 "selectedIconPath": "images/faxian01.png",
+                 "text": "发现"
+                 },
+                 {
+                 "pagePath": "pages/wode/index",
+                 "iconPath": "images/wode02.png",
+                 "selectedIconPath": "images/wode01.png",
+                 "text": "我的"
+                 }
+                 ]
+    },
+    "debug": true
+}

@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CHWebView.xcscheme</key>
+		<key>FMDB.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JKCategories.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>LKDBHelper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -15,6 +25,11 @@
 			<false/>
 		</dict>
 		<key>Pods-TengleHappySchool.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,27 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>07C3DFABE86D5BBD36530DCCEFD6BEF9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>418EAEFEA0CF91D6D07ADF8B8808681B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4742E5FD08C6D7C50E00B4D02F64D749</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>586F2DFA9BDCC6675C2546793A69E5CC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5F9A66838823F4120B7BD7C6D798C59E</key>
+		<key>6A20887F1EACE53D6FD46D34FCE325CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6B8ED454171018A33DD72925E6AB5324</key>
+		<key>8642CC820CE8C5B88C113D7F47AF4BC3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B5189776839607E5A502ADCE30569BEB</key>
+		<key>BFC104EA05596275561DC3F086C247AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DA991C6C58748A8A8D033CED95F1D51A</key>
+		<key>F1A57F063DAC9B33748B129DD30F145E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5258B79C1ED514EF00805554 /* app.json in Resources */ = {isa = PBXBuildFile; fileRef = 5258B79B1ED514EF00805554 /* app.json */; };
+		5258B79F1ED516F700805554 /* MWWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5258B79E1ED516F700805554 /* MWWebViewController.m */; };
+		5258B7A11ED5335200805554 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5258B7A01ED5335200805554 /* libsqlite3.0.tbd */; };
+		5258B7A51ED55E2300805554 /* MWTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5258B7A41ED55E2300805554 /* MWTabViewController.m */; };
+		5258B7A81ED55E8100805554 /* MWNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5258B7A71ED55E8100805554 /* MWNavViewController.m */; };
 		52FF84BC1ED40942007305DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FF84BB1ED40942007305DB /* main.m */; };
 		52FF84BF1ED40942007305DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FF84BE1ED40942007305DB /* AppDelegate.m */; };
 		52FF84C21ED40942007305DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FF84C11ED40942007305DB /* ViewController.m */; };
@@ -44,6 +49,14 @@
 
 /* Begin PBXFileReference section */
 		0092CAFAE33BFB3805A644C4 /* Pods-TengleHappySchool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TengleHappySchool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TengleHappySchool/Pods-TengleHappySchool.debug.xcconfig"; sourceTree = "<group>"; };
+		5258B79B1ED514EF00805554 /* app.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = app.json; sourceTree = "<group>"; };
+		5258B79D1ED516F700805554 /* MWWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWWebViewController.h; sourceTree = "<group>"; };
+		5258B79E1ED516F700805554 /* MWWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWWebViewController.m; sourceTree = "<group>"; };
+		5258B7A01ED5335200805554 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		5258B7A31ED55E2300805554 /* MWTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTabViewController.h; sourceTree = "<group>"; };
+		5258B7A41ED55E2300805554 /* MWTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTabViewController.m; sourceTree = "<group>"; };
+		5258B7A61ED55E8100805554 /* MWNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNavViewController.h; sourceTree = "<group>"; };
+		5258B7A71ED55E8100805554 /* MWNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNavViewController.m; sourceTree = "<group>"; };
 		52FF84B71ED40942007305DB /* TengleHappySchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TengleHappySchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FF84BB1ED40942007305DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		52FF84BD1ED40942007305DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5258B7A11ED5335200805554 /* libsqlite3.0.tbd in Frameworks */,
 				52FF85101ED43CE0007305DB /* JavaScriptCore.framework in Frameworks */,
 				60921DA19A8E41BD93057FE6 /* libPods-TengleHappySchool.a in Frameworks */,
 			);
@@ -109,6 +123,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5258B79A1ED514EF00805554 /* JsonConfigration */ = {
+			isa = PBXGroup;
+			children = (
+				5258B79B1ED514EF00805554 /* app.json */,
+			);
+			path = JsonConfigration;
+			sourceTree = "<group>";
+		};
+		5258B7A21ED55E0B00805554 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				5258B7A31ED55E2300805554 /* MWTabViewController.h */,
+				5258B7A41ED55E2300805554 /* MWTabViewController.m */,
+				5258B7A61ED55E8100805554 /* MWNavViewController.h */,
+				5258B7A71ED55E8100805554 /* MWNavViewController.m */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
 		52FF84AE1ED40942007305DB = {
 			isa = PBXGroup;
 			children = (
@@ -134,18 +167,22 @@
 		52FF84B91ED40942007305DB /* TengleHappySchool */ = {
 			isa = PBXGroup;
 			children = (
+				5258B79A1ED514EF00805554 /* JsonConfigration */,
 				52FF84FB1ED41E34007305DB /* WKHeader.h */,
 				52FF84ED1ED40968007305DB /* image.png */,
 				52FF84EE1ED40968007305DB /* index1.css */,
 				52FF84EF1ED40968007305DB /* index1.html */,
 				52FF84F01ED40968007305DB /* index1.js */,
 				52FF85071ED42862007305DB /* test.html */,
+				5258B7A21ED55E0B00805554 /* BaseView */,
 				52FF850C1ED43223007305DB /* MWModel.h */,
 				52FF850D1ED43223007305DB /* MWModel.m */,
 				52FF84BD1ED40942007305DB /* AppDelegate.h */,
 				52FF84BE1ED40942007305DB /* AppDelegate.m */,
 				52FF84C01ED40942007305DB /* ViewController.h */,
 				52FF84C11ED40942007305DB /* ViewController.m */,
+				5258B79D1ED516F700805554 /* MWWebViewController.h */,
+				5258B79E1ED516F700805554 /* MWWebViewController.m */,
 				52FF84C31ED40942007305DB /* Main.storyboard */,
 				52FF84C61ED40942007305DB /* Assets.xcassets */,
 				52FF84C81ED40942007305DB /* LaunchScreen.storyboard */,
@@ -184,6 +221,7 @@
 		FE325B93BACD4DD848696866 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5258B7A01ED5335200805554 /* libsqlite3.0.tbd */,
 				52FF850F1ED43CE0007305DB /* JavaScriptCore.framework */,
 				B7EF1FD589276A063FBE71AB /* libPods-TengleHappySchool.a */,
 			);
@@ -304,6 +342,7 @@
 			files = (
 				52FF84F21ED40968007305DB /* index1.css in Resources */,
 				52FF84CA1ED40942007305DB /* LaunchScreen.storyboard in Resources */,
+				5258B79C1ED514EF00805554 /* app.json in Resources */,
 				52FF84F41ED40968007305DB /* index1.js in Resources */,
 				52FF84C71ED40942007305DB /* Assets.xcassets in Resources */,
 				52FF85081ED42862007305DB /* test.html in Resources */,
@@ -386,6 +425,9 @@
 				52FF850E1ED43223007305DB /* MWModel.m in Sources */,
 				52FF84BF1ED40942007305DB /* AppDelegate.m in Sources */,
 				52FF84BC1ED40942007305DB /* main.m in Sources */,
+				5258B7A51ED55E2300805554 /* MWTabViewController.m in Sources */,
+				5258B79F1ED516F700805554 /* MWWebViewController.m in Sources */,
+				5258B7A81ED55E8100805554 /* MWNavViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
