@@ -48,7 +48,7 @@
         NSString *mImage = [MWUtil MWCutterStringWithText:mTab.iconPath cutterText:@"/"][1];
         NSString *mSelectedImage = [MWUtil MWCutterStringWithText:mTab.selectedIconPath cutterText:@"/"][1];
 
-        [self setUpOneChildVc:[MWWebViewController alloc] title:mTab.text image:@"http://www.iconpng.com/png/flaticon_user-set/young6.png" selectedImage:@"http://www.iconpng.com/png/flaticon_user-set/young5.png"];
+        [self setUpOneChildVc:[[MWNavViewController alloc] initWithRootViewController:[[MWWebViewController alloc] init]] title:mTab.text image:@"http://www.iconpng.com/png/flaticon_user-set/young6.png" selectedImage:@"http://www.iconpng.com/png/flaticon_user-set/young5.png"];
 
         
     }    

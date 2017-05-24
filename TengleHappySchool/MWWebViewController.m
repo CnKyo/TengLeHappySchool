@@ -148,10 +148,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     mAppConfig = [MWAppConfig searchWithWhere:nil][0];
-    UIView *mTop = [UIView new];
-    mTop.frame = CGRectMake(0, 0, DEVICE_Width, 20);
-    mTop.backgroundColor = [MWUtil MWColorWithHexString:mAppConfig.window.navigationBarBackgroundColor];
-    [self.view addSubview:mTop];
+//    UIView *mTop = [UIView new];
+//    mTop.frame = CGRectMake(0, 0, DEVICE_Width, 20);
+//    mTop.backgroundColor = [MWUtil MWColorWithHexString:mAppConfig.window.navigationBarBackgroundColor];
+//    [self.view addSubview:mTop];
     // Do any additional setup after loading the view.
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -176,7 +176,7 @@
     // 我们可以在WKScriptMessageHandler代理中接收到
     [config.userContentController addScriptMessageHandler:self name:@"AppModel"];
     
-    self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 20, DEVICE_Width, DEVICE_Height-20)
+    self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds
                                       configuration:config];
     
     
@@ -209,8 +209,8 @@
     [self.view addSubview:self.progressView];
     self.progressView.backgroundColor = [UIColor redColor];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"后退" style:UIBarButtonItemStyleDone target:self action:@selector(goback)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"前进" style:UIBarButtonItemStyleDone target:self action:@selector(gofarward)];
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"后退" style:UIBarButtonItemStyleDone target:self action:@selector(goback)];
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"前进" style:UIBarButtonItemStyleDone target:self action:@selector(gofarward)];
     
 }
 
@@ -246,6 +246,9 @@
         }];
     }else{
         MWWebViewController *vc = [MWWebViewController new];
+        if (![vc isEqual:[self topViewController]]) {
+            vc.hidesBottomBarWhenPushed = YES;
+        }
         [self.navigationController pushViewController:vc animated:YES];
     }
     
@@ -466,5 +469,23 @@
     MWTabList *mTab = mAppConfig.tabBar.list[tabBarController.selectedIndex];
 
     
+}
+- (UIViewController *)topViewController {
+    UIViewController *resultVC;
+    resultVC = [self _topViewController:[[UIApplication sharedApplication].keyWindow rootViewController]];
+    while (resultVC.presentedViewController) {
+        resultVC = [self _topViewController:resultVC.presentedViewController];
+    }
+    return resultVC;
+}
+- (UIViewController *)_topViewController:(UIViewController *)vc {
+    if ([vc isKindOfClass:[UINavigationController class]]) {
+        return [self _topViewController:[(UINavigationController *)vc topViewController]];
+    } else if ([vc isKindOfClass:[UITabBarController class]]) {
+        return [self _topViewController:[(UITabBarController *)vc selectedViewController]];
+    } else {
+        return vc;
+    }
+    return nil;
 }
 @end
