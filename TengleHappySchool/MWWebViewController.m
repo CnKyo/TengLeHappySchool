@@ -129,6 +129,62 @@
 {
     return [mText componentsSeparatedByString:mCutter];
 }
+
+
+
+/**
+ 从网络获取图片
+ 
+ @param fileURL 图片地址
+ @return 返回图片
+ */
++ (UIImage *)MWGetImageFromURL:(NSString *)fileURL{
+    MLLog(@"执行图片下载函数");
+    UIImage * result;
+    
+    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:fileURL]];
+    result = [UIImage imageWithData:data];
+    
+    return result;
+}
+
+/**
+ 保存图片到本地
+ 
+ @param image 要保存的图片
+ @param imageName 图片名称
+ @param extension 文件类型
+ @param directoryPath 文件路径
+ */
++ (void)MWSaveImage:(UIImage *)image withFileName:(NSString *)imageName ofType:(NSString *)extension inDirectory:(NSString *)directoryPath{
+    if ([[extension lowercaseString] isEqualToString:@"png"]) {
+        [UIImagePNGRepresentation(image) writeToFile:[directoryPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@", imageName, @"png"]] options:NSAtomicWrite error:nil];
+    } else if ([[extension lowercaseString] isEqualToString:@"jpg"] || [[extension lowercaseString] isEqualToString:@"jpeg"]) {
+        [UIImageJPEGRepresentation(image, 1.0) writeToFile:[directoryPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@", imageName, @"jpg"]] options:NSAtomicWrite error:nil];
+    } else {
+        //ALog(@"Image Save Failed\nExtension: (%@) is not recognized, use (PNG/JPG)", extension);
+        MLLog(@"文件后缀不认识");
+    }
+}
+
+/**
+ 获取本地图片
+ 
+ @param fileName 图片名称
+ @param extension 类型
+ @param directoryPath 路径
+ @return 返回一张图片
+ */
++ (UIImage *)MWLoadLocalImage:(NSString *)fileName ofType:(NSString *)extension inDirectory:(NSString *)directoryPath{
+    UIImage * result = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@.%@", directoryPath, fileName, extension]];
+    
+    return result;
+}
+
+
+
+
+
 @end
 
 @interface MWWebViewController ()<WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate,UITabBarControllerDelegate>
@@ -246,9 +302,7 @@
         }];
     }else{
         MWWebViewController *vc = [MWWebViewController new];
-        if (![vc isEqual:[self topViewController]]) {
-            vc.hidesBottomBarWhenPushed = YES;
-        }
+        vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }
     

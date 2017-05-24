@@ -19,13 +19,15 @@
 @implementation MWTabViewController
 {
     MWAppConfig *mAppConfig;
+    NSMutableArray *mImageArr;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     mAppConfig = [MWAppConfig searchWithWhere:nil][0];
-    
+    mImageArr = [NSMutableArray new];
+    [self uploadImages];
     //设置文字的属性
     [self setUpItemTitleTextAttrs];
     //添加子控件
@@ -37,6 +39,46 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)uploadImages{
+    [mImageArr removeAllObjects];
+    for (int i = 0; i<mAppConfig.tabBar.list.count; i++) {
+        
+        MWTabList *mTabObj = mAppConfig.tabBar.list[i];
+
+        NSString * documentsDirectoryPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        MLLog(@"保存路径:%@",documentsDirectoryPath);
+        //Get Image From URL
+        UIImage * imageFromURL = [MWUtil MWGetImageFromURL:@"http://www.iconpng.com/png/flaticon_user-set/young6.png"];
+        
+        //Save Image to Directory
+        [MWUtil MWSaveImage:[self scaleImg:imageFromURL maxsize:30] withFileName:[NSString stringWithFormat:@"%@n",mTabObj.text] ofType:@"png" inDirectory:documentsDirectoryPath];
+        
+        //Load Image From Directory
+        UIImage * imageFromWeb = [MWUtil MWLoadLocalImage:[NSString stringWithFormat:@"%@n",mTabObj.text] ofType:@"png" inDirectory:documentsDirectoryPath];
+       
+        mTabObj.mTabBarNormalImage = imageFromWeb;
+
+        //Get Image From URL
+        UIImage * imageFromURL2 = [MWUtil MWGetImageFromURL:@"http://www.iconpng.com/png/flaticon_user-set/young6.png"];
+        
+        //Save Image to Directory
+        [MWUtil MWSaveImage:[self scaleImg:imageFromURL2 maxsize:30] withFileName:[NSString stringWithFormat:@"%@s",mTabObj.text] ofType:@"png" inDirectory:documentsDirectoryPath];
+        
+        //Load Image From Directory
+        UIImage * imageFromWeb2 = [MWUtil MWLoadLocalImage:[NSString stringWithFormat:@"%@s",mTabObj.text] ofType:@"png" inDirectory:documentsDirectoryPath];
+        
+        
+        mTabObj.mTabBarSelectedImage = imageFromWeb2;
+
+        [mImageArr addObject:mTabObj];
+        //        [mTabObj.mTabBarNormalImage setImage:imageFromWeb];
+        
+        //取得目录下所有文件名
+        NSArray *file = [[[NSFileManager alloc] init] subpathsAtPath:documentsDirectoryPath];
+        //MLLog(@"%d",[file count]);
+        MLLog(@"%@",file);
+    }
+}
 /**
  添加子控制器
  */
@@ -45,52 +87,23 @@
     for (int i = 0; i<mAppConfig.tabBar.list.count; i++) {
         
         MWTabList *mTab = mAppConfig.tabBar.list[i];
-        NSString *mImage = [MWUtil MWCutterStringWithText:mTab.iconPath cutterText:@"/"][1];
-        NSString *mSelectedImage = [MWUtil MWCutterStringWithText:mTab.selectedIconPath cutterText:@"/"][1];
 
-        [self setUpOneChildVc:[[MWNavViewController alloc] initWithRootViewController:[[MWWebViewController alloc] init]] title:mTab.text image:@"http://www.iconpng.com/png/flaticon_user-set/young6.png" selectedImage:@"http://www.iconpng.com/png/flaticon_user-set/young5.png"];
+        [self setUpOneChildVc:[[MWNavViewController alloc] initWithRootViewController:[[MWWebViewController alloc] init]] title:mTab.text image:mTab.mTabBarNormalImage selectedImage:mTab.mTabBarSelectedImage];
 
         
     }    
     
 }
-- (void)setUpOneChildVc:(UIViewController *)childVc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage
+- (void)setUpOneChildVc:(UIViewController *)childVc title:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage
 {
     
-    UIImageView *mImg = [UIImageView new];
-    [mImg sd_setImageWithURL:[NSURL URLWithString:image] placeholderImage:[UIImage imageNamed:@"set"]];
-    
-    UIImageView *mSelectedImg = [UIImageView new];
-    [mSelectedImg sd_setImageWithURL:[NSURL URLWithString:selectedImage] placeholderImage:[UIImage imageNamed:@"set"]];
-    
-    UIImage *mNImage = mImg.image;
-    mNImage = [mNImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIImage *mSImage = mSelectedImg.image;
-    mSImage = [mSImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
-        //加载图片
-        MLLog(@"oneImage:%@",mImg.image);
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            //加载完成更新view
-            MLLog(@"two");
-            
-        });
-    });
-
     
     childVc.tabBarItem.title = title;
-    if (image.length){
-        childVc.tabBarItem.image = [self scaleImg:mNImage maxsizeW:25];
-    }
-    if (selectedImage.length){
-        childVc.tabBarItem.selectedImage = [self scaleImg:mSImage maxsizeW:25];
-    }
-//    childVc.tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:[self scaleImg:mNImage maxsizeW:25] selectedImage:[self scaleImg:mSImage maxsizeW:25]];
+//    childVc.tabBarItem.image = [self scaleImg:[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] maxsizeW:25];
+//    childVc.tabBarItem.selectedImage = [self scaleImg:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] maxsizeW:25];
+
+    
+    childVc.tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 
     [self addChildViewController:childVc];
     
@@ -123,7 +136,51 @@
     UIGraphicsEndImageContext();
     return retimg;
 }
-
+//缩放图片
+-(UIImage*)scaleImg:(UIImage*)org maxsize:(CGFloat)maxsize
+{
+    
+    UIImage* retimg = nil;
+    
+    CGFloat h;
+    CGFloat w;
+    if( org.size.width > org.size.height )
+        {
+        if( org.size.width > maxsize )
+            {
+            w = maxsize;
+            h = (w / org.size.width) * org.size.height;
+            }
+        else
+            {
+            w = org.size.width;
+            h = org.size.height;
+            return org;
+            }
+        }
+    else
+        {
+        if( org.size.height > maxsize )
+            {
+            h = maxsize;
+            w = (h / org.size.height) * org.size.width;
+            }
+        else
+            {
+            w = org.size.width;
+            h = org.size.height;
+            return org;
+            }
+        }
+    
+    UIGraphicsBeginImageContext( CGSizeMake(w, h) );
+    
+    [org drawInRect:CGRectMake(0, 0, w, h)];
+    retimg = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    return retimg;
+}
 
 - (void)setUpItemTitleTextAttrs
 {

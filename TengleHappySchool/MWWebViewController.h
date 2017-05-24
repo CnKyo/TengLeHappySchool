@@ -50,6 +50,34 @@
  */
 + (NSArray *)MWCutterStringWithText:(NSString *)mText cutterText:(NSString *)mCutter;
 
+
+/**
+ 从网络获取图片
+
+ @param fileURL 图片地址
+ @return 返回图片
+ */
++ (UIImage *)MWGetImageFromURL:(NSString *)fileURL;
+
+/**
+ 保存图片到本地
+
+ @param image 要保存的图片
+ @param imageName 图片名称
+ @param extension 文件类型
+ @param directoryPath 文件路径
+ */
++ (void)MWSaveImage:(UIImage *)image withFileName:(NSString *)imageName ofType:(NSString *)extension inDirectory:(NSString *)directoryPath;
+
+/**
+ 获取本地图片
+
+ @param fileName 图片名称
+ @param extension 类型
+ @param directoryPath 路径
+ @return 返回一张图片
+ */
++ (UIImage *)MWLoadLocalImage:(NSString *)fileName ofType:(NSString *)extension inDirectory:(NSString *)directoryPath;
 @end
 
 @interface MWWebViewController : UIViewController

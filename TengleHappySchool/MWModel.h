@@ -80,4 +80,9 @@
 ///文本
 @property (strong,nonatomic) NSString *text;
 
+@property (strong,nonatomic) UIImage *mTabBarNormalImage;
+
+@property (strong,nonatomic) UIImage *mTabBarSelectedImage;
+
+
 @end
