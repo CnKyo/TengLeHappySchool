@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "WKHeader.h"
+#import <YTKNetwork.h>
+
+
 @class body;
 @interface MWModel : NSObject
 

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -39,6 +44,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>YTKNetwork.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>YYModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,17 +57,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>07C3DFABE86D5BBD36530DCCEFD6BEF9</key>
+		<key>1F1E28C815BD2CDA67E3B9B8FE2D73B7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>418EAEFEA0CF91D6D07ADF8B8808681B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4742E5FD08C6D7C50E00B4D02F64D749</key>
+		<key>57CFDEF9633FFF1038CC81929EA1147E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,7 +72,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6A20887F1EACE53D6FD46D34FCE325CE</key>
+		<key>61B64182BE239FAC4C67E8239ADD7127</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7F90245EC512A9DF8D413E633E15A9B7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,7 +87,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9E033EDB5EC0819481B0546434FA577B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BFC104EA05596275561DC3F086C247AD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C0747C2EF788C14C1FD6CBB1CF0E8171</key>
 		<dict>
 			<key>primary</key>
 			<true/>
