@@ -131,7 +131,7 @@
 }
 @end
 
-@interface MWWebViewController ()<WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate>
+@interface MWWebViewController ()<WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate,UITabBarControllerDelegate>
 
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) UIProgressView *progressView;
@@ -139,15 +139,23 @@
 
 
 @end
+@class MWUtil;
 
 @implementation MWWebViewController
-
+{
+    MWAppConfig *mAppConfig;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    mAppConfig = [MWAppConfig searchWithWhere:nil][0];
+    UIView *mTop = [UIView new];
+    mTop.frame = CGRectMake(0, 0, DEVICE_Width, 20);
+    mTop.backgroundColor = [MWUtil MWColorWithHexString:mAppConfig.window.navigationBarBackgroundColor];
+    [self.view addSubview:mTop];
     // Do any additional setup after loading the view.
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.automaticallyAdjustsScrollViewInsets = NO;
-    
+//    self.tabBarController.delegate = self;
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     
     // 设置偏好设置
@@ -168,7 +176,7 @@
     // 我们可以在WKScriptMessageHandler代理中接收到
     [config.userContentController addScriptMessageHandler:self name:@"AppModel"];
     
-    self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds
+    self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 20, DEVICE_Width, DEVICE_Height-20)
                                       configuration:config];
     
     
@@ -451,6 +459,12 @@
     return [self getObjectData:obj];
     
 }
+#pragma mark----****----选项卡代理方法
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    MLLog(@"选中的索引是：%ld",tabBarController.selectedIndex);
+    MWTabList *mTab = mAppConfig.tabBar.list[tabBarController.selectedIndex];
 
-
+    
+}
 @end

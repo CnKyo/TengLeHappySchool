@@ -22,7 +22,7 @@
     MWAppConfig *mAPPConfig;
 }
 - (void)appInit{
-    
+    ///app.json文件参考微信小程序配置
     NSDictionary *config = [MWUtil MWCurrentJsonConfigration:@"app" ofType:@"json"];
     mAPPConfig = [MWAppConfig yy_modelWithJSON:config];
     if ([MWUtil MWFirstLaunchApp]) {
@@ -40,7 +40,7 @@
 
 
 //    [[UINavigationBar appearance] setTintColor:[MWUtil MWColorWithHexString:mAPPConfig.window.navigationBarBackgroundColor]];
-//    [[UINavigationBar appearance] setBarTintColor:[MWUtil MWColorWithHexString:mAPPConfig.window.backgroundColor]];
+    [[UINavigationBar appearance] setBarTintColor:[MWUtil MWColorWithHexString:mAPPConfig.window.navigationBarBackgroundColor]];
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                                                            [UIColor whiteColor], NSForegroundColorAttributeName, [UIFont systemFontOfSize:21], NSFontAttributeName, nil]];
     

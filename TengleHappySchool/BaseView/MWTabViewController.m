@@ -48,7 +48,7 @@
         NSString *mImage = [MWUtil MWCutterStringWithText:mTab.iconPath cutterText:@"/"][1];
         NSString *mSelectedImage = [MWUtil MWCutterStringWithText:mTab.selectedIconPath cutterText:@"/"][1];
 
-        [self setUpOneChildVc:[[MWNavViewController alloc] initWithRootViewController:[[MWWebViewController alloc] init]] title:mTab.text image:mImage selectedImage:mSelectedImage];
+        [self setUpOneChildVc:[MWWebViewController alloc] title:mTab.text image:@"http://www.iconpng.com/png/flaticon_user-set/young6.png" selectedImage:@"http://www.iconpng.com/png/flaticon_user-set/young5.png"];
 
         
     }    
@@ -58,16 +58,70 @@
 {
     
     UIImageView *mImg = [UIImageView new];
-    [mImg sd_setImageWithURL:[NSURL URLWithString:image] placeholderImage:nil];
+    [mImg sd_setImageWithURL:[NSURL URLWithString:image] placeholderImage:[UIImage imageNamed:@"set"]];
     
     UIImageView *mSelectedImg = [UIImageView new];
-    [mSelectedImg sd_setImageWithURL:[NSURL URLWithString:selectedImage] placeholderImage:nil];
+    [mSelectedImg sd_setImageWithURL:[NSURL URLWithString:selectedImage] placeholderImage:[UIImage imageNamed:@"set"]];
+    
+    UIImage *mNImage = mImg.image;
+    mNImage = [mNImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *mSImage = mSelectedImg.image;
+    mSImage = [mSImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        //加载图片
+        MLLog(@"oneImage:%@",mImg.image);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            //加载完成更新view
+            MLLog(@"two");
+            
+        });
+    });
+
     
     childVc.tabBarItem.title = title;
-    if (image.length) childVc.tabBarItem.image = mImg.image;
-    if (selectedImage.length) childVc.tabBarItem.selectedImage = mSelectedImg.image;
+    if (image.length){
+        childVc.tabBarItem.image = [self scaleImg:mNImage maxsizeW:25];
+    }
+    if (selectedImage.length){
+        childVc.tabBarItem.selectedImage = [self scaleImg:mSImage maxsizeW:25];
+    }
+//    childVc.tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:[self scaleImg:mNImage maxsizeW:25] selectedImage:[self scaleImg:mSImage maxsizeW:25]];
+
     [self addChildViewController:childVc];
     
+}
+-(UIImage*)scaleImg:(UIImage*)img maxsizeW:(CGFloat)maxW //缩放图片,,最大多少
+{
+    
+    UIImage* retimg = nil;
+    
+    CGFloat h;
+    CGFloat w;
+    
+    if( img.size.width > maxW )
+        {
+        w = maxW;
+        h = (w / img.size.width) * img.size.height;
+        }
+    else
+        {
+        w = img.size.width;
+        h = img.size.height;
+        return img;
+        }
+    
+    UIGraphicsBeginImageContext( CGSizeMake(w, h) );
+    
+    [img drawInRect:CGRectMake(0, 0, w, w)];
+    retimg = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    return retimg;
 }
 
 
