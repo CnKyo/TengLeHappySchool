@@ -187,7 +187,7 @@
 
 @end
 
-@interface MWWebViewController ()<WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate,UITabBarControllerDelegate>
+@interface MWWebViewController ()<WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate,UITabBarControllerDelegate,NSXMLParserDelegate>
 
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) UIProgressView *progressView;
@@ -237,19 +237,6 @@
     
     
     NSURL *path = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"html"];
-    
-    
-    NSString *wxssFile = [[NSBundle mainBundle] pathForResource:@"mine" ofType:@"wxss"];
-    NSString *wxssFileContent = [[NSString alloc] initWithContentsOfFile:wxssFile encoding:NSUTF8StringEncoding error:nil];
-    
-    MLLog(@"wxss文件是：%@",wxssFileContent);
-    
-    NSString *wxmlFile = [[NSBundle mainBundle] pathForResource:@"mine" ofType:@"wxml"];
-    NSString *wxmlFileContent = [[NSString alloc] initWithContentsOfFile:wxmlFile encoding:NSUTF8StringEncoding error:nil];
-    
-    MLLog(@"wxml文件是：%@",wxmlFileContent);
-    
-
 
     [self.webView loadRequest:[NSURLRequest requestWithURL:path]];
     [self.view addSubview:self.webView];
@@ -286,7 +273,56 @@
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+    [self xmlparser];
 }
+- (void)xmlparser{
+    NSString *wxssFile = [[NSBundle mainBundle] pathForResource:@"mine" ofType:@"wxss"];
+    NSString *wxssFileContent = [[NSString alloc] initWithContentsOfFile:wxssFile encoding:NSUTF8StringEncoding error:nil];
+    
+    
+    
+    
+    MLLog(@"wxss文件是：%@",wxssFileContent);
+    
+    NSString *wxmlFile = [[NSBundle mainBundle] pathForResource:@"mine" ofType:@"wxml"];
+    NSString *wxmlFileContent = [[NSString alloc] initWithContentsOfFile:wxmlFile encoding:NSUTF8StringEncoding error:nil];
+    NSData *wxmlData = [[NSData alloc]initWithContentsOfFile:wxmlFile];
+    
+    [self XMLParserWithData:wxmlData];
+}
+//*利用 NSXMLParser 方式
+-(void)XMLParserWithData:(NSData *)data{
+    //1.创建NSXMLParser
+    NSXMLParser *XMLParser = [[NSXMLParser alloc] initWithData:data];
+    //2.设置代理
+    [XMLParser setDelegate:self];
+    //3.开始解析
+    [XMLParser parse];
+}
+#pragma mark - NSXMLParserDelegate xml解析代理方法
+//1.开始解析XML文件
+-(void)parserDidStartDocument:(NSXMLParser *)parser{
+    NSLog(@"开始解析XML文件");
+}
+//2.解析XML文件中所有的元素
+-(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary<NSString *,NSString *> *)attributeDict{
+    MLLog(@"解析XML文件中所有的元素:elementName:%@,attributeDict:%@",elementName,attributeDict);
+    if ([elementName isEqualToString:@"view"]) {
+//        //MJExtension 解析数据
+//        Model *model = [Model mj_objectWithKeyValues:attributeDict];
+//        [self.dataArrM addObject:model];
+        MLLog(@"有elementName:%@",elementName);
+    }
+}
+//3.XML文件中每一个元素解析完成
+-(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
+    MLLog(@"XML文件中每一个元素解析完成:elementName:%@,qName:%@",elementName,qName);
+}
+//4.XML所有元素解析完毕
+-(void)parserDidEndDocument:(NSXMLParser *)parser{
+    MLLog(@"XML所有元素解析完毕:");
+}
+
 -(void)keyboardWillHide:(NSNotification *)notification
 {
     NSString *jsToTextFiled = @"document.getElementById('name').innerHTML = response";

@@ -11,7 +11,10 @@
 #import "WKHeader.h"
 #import "MWModel.h"
 #import <objc/runtime.h>
-@interface ViewController ()<WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate>
+#import "MWWebViewController.h"
+
+@class MWUtil;
+@interface ViewController ()<WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate,NSXMLParserDelegate>
 
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) UIProgressView *progressView;
@@ -19,316 +22,221 @@
 @end
 
 @implementation ViewController
+{
+    NSMutableArray *mWXSSArr;
+    NSMutableArray *mTarr;
 
+    WXCSS *mCssObj;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"测试页面";
     
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    
-    WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
-    
-    // 设置偏好设置
-    config.preferences = [[WKPreferences alloc] init];
-    // 默认为0
-    config.preferences.minimumFontSize = 10;
-    // 默认认为YES
-    config.preferences.javaScriptEnabled = YES;
-    // 在iOS上默认为NO，表示不能自动通过窗口打开
-    config.preferences.javaScriptCanOpenWindowsAutomatically = NO;
-    
-    // web内容处理池
-    config.processPool = [[WKProcessPool alloc] init];
+    mWXSSArr = [NSMutableArray new];
+    mTarr = [NSMutableArray new];
 
-    // 通过JS与webview内容交互
-    config.userContentController = [[WKUserContentController alloc]init];
-    // 注入JS对象名称AppModel，当JS通过AppModel来调用时，
-    // 我们可以在WKScriptMessageHandler代理中接收到
-    [config.userContentController addScriptMessageHandler:self name:@"AppModel"];
-    
-    self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds
-                                      configuration:config];
-    
-    
-    NSURL *path = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"html"];
-    [self.webView loadRequest:[NSURLRequest requestWithURL:path]];
-    [self.view addSubview:self.webView];
-    
-    // 导航代理
-    self.webView.navigationDelegate = self;
-    // 与webview UI交互代理
-    self.webView.UIDelegate = self;
-    
-    // 添加KVO监听
-    [self.webView addObserver:self
-                   forKeyPath:@"loading"
-                      options:NSKeyValueObservingOptionNew
-                      context:nil];
-    [self.webView addObserver:self
-                   forKeyPath:@"title"
-                      options:NSKeyValueObservingOptionNew
-                      context:nil];
-    [self.webView addObserver:self
-                   forKeyPath:@"estimatedProgress"
-                      options:NSKeyValueObservingOptionNew
-                      context:nil];
-    
-    // 添加进入条
-    self.progressView = [[UIProgressView alloc] init];
-    self.progressView.frame = self.view.bounds;
-    [self.view addSubview:self.progressView];
-    self.progressView.backgroundColor = [UIColor redColor];
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"后退" style:UIBarButtonItemStyleDone target:self action:@selector(goback)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"前进" style:UIBarButtonItemStyleDone target:self action:@selector(gofarward)];
-
+    mCssObj = [WXCSS new];
+    mCssObj.mWXSS = [WXSSObj new];
+    [self xmlparser];
 }
-
-- (void)goback {
-    if ([self.webView canGoBack]) {
-        [self.webView goBack];
-
-    }else{
-        [self.navigationController popViewControllerAnimated:YES];
-    }
-
-}
-
-- (void)gofarward {
-    if ([self.webView canGoForward]) {
-        [self.webView goForward];
-    }
-}
-
-#pragma mark - WKScriptMessageHandler----****----按钮参数获取
-- (void)userContentController:(WKUserContentController *)userContentController
-      didReceiveScriptMessage:(WKScriptMessage *)message {
+- (void)xmlparser{
+    [mWXSSArr removeAllObjects];
+    NSString *wxssFile = [[NSBundle mainBundle] pathForResource:@"mine" ofType:@"wxss"];
+    NSString *wxssFileContent = [[NSString alloc] initWithContentsOfFile:wxssFile encoding:NSUTF8StringEncoding error:nil];
     
-//    MLLog(@"name:%@\n ----****---- body:%@\n ----****---- frameInfo:%@\n",message.name,message.body,message.frameInfo);
+    NSArray *mCSSArr = [MWUtil MWCutterStringWithText:wxssFileContent cutterText:@"}"];
     
-    MWModel *model = [MWModel yy_modelWithJSON:message.body];
-    MLLog(@"最后得到的对象是：%@",model.body);
-    ///oc 反调js
-    if ([model.body.id isEqualToString:@"2"]) {
-        NSString *ocTojs = [NSString stringWithFormat:@"alert('%s')","this is alertview pop to "];
-        [self.webView evaluateJavaScript:ocTojs completionHandler:^(id _Nullable result, NSError * _Nullable error) {
-            NSLog(@"%@----%@",result, error);
-        }];
-    }else{
-        ViewController *vc = [ViewController new];
-        [self.navigationController pushViewController:vc animated:YES];
-    }
-    
-//    if ([message.name isEqualToString:@"AppModel"]) {
-//        // 打印所传过来的参数，只支持NSNumber, NSString, NSDate, NSArray,
-//        // NSDictionary, and NSNull类型
-//        MLLog(@"%@", message.body);
-//    }
-}
+    MLLog(@"wxss文件是：%@",wxssFileContent);
 
-#pragma mark - KVO
-- (void)observeValueForKeyPath:(NSString *)keyPath
-                      ofObject:(id)object
-                        change:(NSDictionary<NSString *,id> *)change
-                       context:(void *)context {
-    if ([keyPath isEqualToString:@"loading"]) {
-        MLLog(@"loading");
-    } else if ([keyPath isEqualToString:@"title"]) {
-        self.title = self.webView.title;
-    } else if ([keyPath isEqualToString:@"estimatedProgress"]) {
-        MLLog(@"progress: %f", self.webView.estimatedProgress);
-        self.progressView.progress = self.webView.estimatedProgress;
-    }
-    
-    // 加载完成
-    if (!self.webView.loading) {
-        // 手动调用JS代码
-        // 每次页面完成都弹出来，大家可以在测试时再打开
-//        NSString *js = @"callJsAlert()";
-//        [self.webView evaluateJavaScript:js completionHandler:^(id _Nullable response, NSError * _Nullable error) {
-//            MLLog(@"response: %@ error: %@", response, error);
-//            MLLog(@"call js alert by native");
-//        }];
+    for (int i = 0 ; i<mCSSArr.count
+         ; i++) {
         
-        [UIView animateWithDuration:0.5 animations:^{
-            self.progressView.alpha = 0;
-        }];
-    }
-}
-
-#pragma mark - WKNavigationDelegate
-- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-    
-    NSString *hostname = navigationAction.request.URL.host.lowercaseString;
-    
-//    if (navigationAction.navigationType == WKNavigationTypeLinkActivated
-//        && ![hostname containsString:@".baidu.com"]) {
-//        // 对于跨域，需要手动跳转
-//        [[UIApplication sharedApplication] openURL:navigationAction.request.URL];
-//        
-//        // 不允许web内跳转
-//        decisionHandler(WKNavigationActionPolicyCancel);
-//    } else {
-        self.progressView.alpha = 1.0;
-        decisionHandler(WKNavigationActionPolicyAllow);
-//    }
-    
-    MLLog(@"%s", __FUNCTION__);
-}
-
-- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
-    decisionHandler(WKNavigationResponsePolicyAllow);
-    MLLog(@"%s", __FUNCTION__);
-}
-
-- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(null_unspecified WKNavigation *)navigation {
-    MLLog(@"%s", __FUNCTION__);
-}
-
-- (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(null_unspecified WKNavigation *)navigation {
-    MLLog(@"%s", __FUNCTION__);
-}
-
-- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
-    MLLog(@"%s", __FUNCTION__);
-}
-
-- (void)webView:(WKWebView *)webView didCommitNavigation:(null_unspecified WKNavigation *)navigation {
-    MLLog(@"%s", __FUNCTION__);
-}
-
-- (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation {
-    MLLog(@"%s", __FUNCTION__);
-}
-
-- (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
-    
-}
-
-- (void)webView:(WKWebView *)webView didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential *__nullable credential))completionHandler {
-    MLLog(@"%s", __FUNCTION__);
-    completionHandler(NSURLSessionAuthChallengePerformDefaultHandling, nil);
-}
-
-- (void)webViewWebContentProcessDidTerminate:(WKWebView *)webView {
-    MLLog(@"%s", __FUNCTION__);
-}
-
-#pragma mark - WKUIDelegate
-- (void)webViewDidClose:(WKWebView *)webView {
-    MLLog(@"%s", __FUNCTION__);
-}
-#pragma mark----****----js调oc的alertview会先调用这个方法
-- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
-    MLLog(@"%s", __FUNCTION__);
-    
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"alert" message:@"JS调用alert" preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        completionHandler();
-    }]];
-    
-    [self presentViewController:alert animated:YES completion:NULL];
-    MLLog(@"%@", message);
-}
-
-- (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL result))completionHandler {
-    MLLog(@"%s", __FUNCTION__);
-    
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"confirm" message:@"JS调用confirm" preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        completionHandler(YES);
-    }]];
-    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        completionHandler(NO);
-    }]];
-    [self presentViewController:alert animated:YES completion:NULL];
-    
-    MLLog(@"%@", message);
-}
-
-- (void)webView:(WKWebView *)webView runJavaScriptTextInputPanelWithPrompt:(NSString *)prompt defaultText:(nullable NSString *)defaultText initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(NSString * __nullable result))completionHandler {
-    MLLog(@"%s", __FUNCTION__);
-    
-    MLLog(@"%@", prompt);
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"textinput" message:@"JS调用输入框" preferredStyle:UIAlertControllerStyleAlert];
-    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        textField.textColor = [UIColor redColor];
-    }];
-    
-    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        completionHandler([[alert.textFields lastObject] text]);
-    }]];
-    
-    [self presentViewController:alert animated:YES completion:NULL];
-}
-
-
-/**
- *  对象转换为字典
- *
- *  @param obj 需要转化的对象
- *
- *  @return 转换后的字典
- */
-- (NSDictionary*)getObjectData:(id)obj {
-    
-    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    unsigned int propsCount;
-    
-    objc_property_t *props = class_copyPropertyList([obj class], &propsCount);
-    
-    for(int i = 0;i < propsCount; i++) {
+        NSString *mCss = [NSString stringWithFormat:@"%@}",mCSSArr[i]];
         
-        objc_property_t prop = props[i];
-        NSString *propName = [NSString stringWithUTF8String:property_getName(prop)];
-        id value = [obj valueForKey:propName];
-        if(value == nil) {
-            
-            value = [NSNull null];
-        } else {
-            value = [self getObjectInternal:value];
+        MLLog(@"css文件是：%@",mCss);
+        if (mCss.length<=0 || [mCss isEqualToString:@" "] || mCss==nil || [mCss isEqualToString:@"\r\n\r\n}"]) {
+            continue;
         }
-        [dic setObject:value forKey:propName];
+        NSArray *mSubCss = [MWUtil MWCutterStringWithText:mCss cutterText:@"."];
+        NSString *css = nil;
+        if (mSubCss.count>2) {
+            css = [NSString stringWithFormat:@".%@.%@",mSubCss[1],mSubCss[2]];
+
+        }else{
+            css = [NSString stringWithFormat:@".%@",mSubCss[1]];
+
+        }
+
+        MLLog(@"最后的css文件是：%@",css);
+        [mWXSSArr addObject:css];
+    }
+
+    for (NSString *mCss in mWXSSArr) {
+        MLLog(@"最后的css文件是：%@",mCss);
+        NSArray *mSubCss = [MWUtil MWCutterStringWithText:mCss cutterText:@"{"];
+        if (mSubCss.count<2) {
+            continue;
+        }
+        NSString *mOne = mSubCss[0];
+        NSString *mTwo = mSubCss[1];
+        mCssObj.mName = mOne;
+        NSArray *mMargin = [MWUtil MWCutterStringWithText:mTwo cutterText:@";"];
+        for (int i = 0; i<mMargin.count; i++) {
+        
+            NSString *mF = mMargin[i];
+            
+            if (mF.length<=0 || [mF isEqualToString:@" "] || mF==nil || [mF isEqualToString:@"\r\n}"]) {
+                continue;
+            }
+            
+            NSArray *mContent = [MWUtil MWCutterStringWithText:mF cutterText:@":"];
+            for (int j = 0; j<mContent.count; j++) {
+                
+   
+                NSString *mSubcontent = [self characterText:mContent[j]];
+                if (j == mContent.count-1) {
+                    continue;
+                }
+                if (mSubcontent.length<=0 || [mSubcontent isEqualToString:@" "] || mSubcontent==nil || [mSubcontent isEqualToString:@";"]) {
+                    continue;
+                }
+                NSString *mPX = [self characterText:mContent[j+1]];
+
+                if ([mSubcontent isEqualToString:@"font-size"]) {
+                    mCssObj.mWXSS.fontsize = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"margin-top"]) {
+                    mCssObj.mWXSS.margintop = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"width"]) {
+                    mCssObj.mWXSS.width = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"height"]) {
+                    mCssObj.mWXSS.height = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"border-radius"]) {
+                    mCssObj.mWXSS.borderradius = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"margin-left"]) {
+                    mCssObj.mWXSS.marginleft = mPX;
+                }      if ([mSubcontent isEqualToString:@"margin-right"]) {
+                    mCssObj.mWXSS.marginright = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"position"]) {
+                    mCssObj.mWXSS.position = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"border"]) {
+                    mCssObj.mWXSS.border = mPX;
+                }
+                
+                if ([mSubcontent isEqualToString:@"left"]) {
+                    mCssObj.mWXSS.left = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"overflow"]) {
+                    mCssObj.mWXSS.overflow = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"top"]) {
+                    mCssObj.mWXSS.top = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"backgroundcolor"]) {
+                    mCssObj.mWXSS.backgroundcolor = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"display"]) {
+                    mCssObj.mWXSS.display = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"content"]) {
+                    mCssObj.mWXSS.content = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"clear"]) {
+                    mCssObj.mWXSS.clear = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"text-align"]) {
+                    mCssObj.mWXSS.textalign = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"padding"]) {
+                    mCssObj.mWXSS.padding = mPX;
+                }
+                
+                if ([mSubcontent isEqualToString:@"padding-bottom"]) {
+                    mCssObj.mWXSS.paddingbottom = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"padding-top"]) {
+                    mCssObj.mWXSS.paddingtop = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"border-bottom"]) {
+                    mCssObj.mWXSS.borderbottom = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"vertical-align"]) {
+                    mCssObj.mWXSS.verticalalign = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"color"]) {
+                    mCssObj.mWXSS.color = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"z-index"]) {
+                    mCssObj.mWXSS.zindex = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"font-weight"]) {
+                    mCssObj.mWXSS.fontweight = mPX;
+                }
+                if ([mSubcontent isEqualToString:@"outline"]) {
+                    mCssObj.mWXSS.outline = mPX;
+                }
+            
+            }
+
+            
+        }
+        [mTarr addObject:mCssObj];
     }
     
-    return dic;
+    MLLog(@"最后的css文件是：%@",mTarr);
+
+    NSString *wxmlFile = [[NSBundle mainBundle] pathForResource:@"mine" ofType:@"wxml"];
+    NSString *wxmlFileContent = [[NSString alloc] initWithContentsOfFile:wxmlFile encoding:NSUTF8StringEncoding error:nil];
+    NSData *wxmlData = [[NSData alloc]initWithContentsOfFile:wxmlFile];
+    
+    [self XMLParserWithData:wxmlData];
 }
-- (id)getObjectInternal:(id)obj {
-    
-    if([obj isKindOfClass:[NSString class]]
-       ||
-       [obj isKindOfClass:[NSNumber class]]
-       ||
-       [obj isKindOfClass:[NSNull class]]) {
-        
-        return obj;
-        
+//*利用 NSXMLParser 方式
+-(void)XMLParserWithData:(NSData *)data{
+    //1.创建NSXMLParser
+    NSXMLParser *XMLParser = [[NSXMLParser alloc] initWithData:data];
+    //2.设置代理
+    [XMLParser setDelegate:self];
+    //3.开始解析
+    [XMLParser parse];
+}
+#pragma mark - NSXMLParserDelegate xml解析代理方法
+//1.开始解析XML文件
+-(void)parserDidStartDocument:(NSXMLParser *)parser{
+    MLLog(@"开始解析XML文件");
+}
+//2.解析XML文件中所有的元素
+-(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary<NSString *,NSString *> *)attributeDict{
+    MLLog(@"解析XML文件中所有的元素:elementName:%@,attributeDict:%@",elementName,attributeDict);
+    if ([elementName isEqualToString:@"view"]) {
+
+        MLLog(@"elementName是:%@",elementName);
     }
-    if([obj isKindOfClass:[NSArray class]]) {
-        
-        NSArray *objarr = obj;
-        NSMutableArray *arr = [NSMutableArray arrayWithCapacity:objarr.count];
-        
-        for(int i = 0; i < objarr.count; i++) {
-            
-            [arr setObject:[self getObjectInternal:[objarr objectAtIndex:i]] atIndexedSubscript:i];
-        }
-        return arr;
-    }
-    if([obj isKindOfClass:[NSDictionary class]]) {
-        
-        NSDictionary *objdic = obj;
-        NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithCapacity:[objdic count]];
-        
-        for(NSString *key in objdic.allKeys) {
-            
-            [dic setObject:[self getObjectInternal:[objdic objectForKey:key]] forKey:key];
-        }
-        return dic;
-    }
-    return [self getObjectData:obj];
-    
+}
+//3.XML文件中每一个元素解析完成
+-(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
+    MLLog(@"XML文件中每一个元素解析完成:elementName:%@,qName:%@",elementName,qName);
+}
+//4.XML所有元素解析完毕
+-(void)parserDidEndDocument:(NSXMLParser *)parser{
+    MLLog(@"XML所有元素解析完毕:");
 }
 
+- (void)didReceiveMemoryWarning{
+}
+
+
+- (NSString *)characterText:(NSString *)mText{
+
+    NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@"@\r\n ／（）¥「」＂、[]{}#%-*+=_\\|~＜＞$€^•'@#$%^&*()_+'\""];
+    
+    return [mText stringByTrimmingCharactersInSet:set];
+}
 @end

@@ -15,6 +15,7 @@
 #import "MWModel.h"
 #import <LKDBHelper.h>
 #import <UIImageView+WebCache.h>
+#import "GDataXMLNode.h"
 
 
 //#import <NSObject+LKDBHelper.h>

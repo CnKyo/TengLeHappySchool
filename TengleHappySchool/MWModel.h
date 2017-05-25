@@ -86,3 +86,73 @@
 
 
 @end
+
+@class WXSSObj;
+@interface WXCSS : NSObject
+
+@property (strong,nonatomic) NSString *mName;
+
+@property (strong,nonatomic) NSString *mSubname;
+
+@property (strong,nonatomic) WXSSObj *mWXSS;
+
+@end
+
+@interface WXSSObj : NSObject
+
+@property (strong,nonatomic) NSString *fontsize;
+
+@property (strong,nonatomic) NSString *margintop;
+
+@property (strong,nonatomic) NSString *width;
+
+@property (strong,nonatomic) NSString *height;
+
+@property (strong,nonatomic) NSString *borderradius;
+
+@property (strong,nonatomic) NSString *marginleft;
+
+@property (strong,nonatomic) NSString *marginright;
+
+@property (strong,nonatomic) NSString *position;
+
+@property (strong,nonatomic) NSString *border;
+
+@property (strong,nonatomic) NSString *left;
+
+@property (strong,nonatomic) NSString *overflow;
+
+@property (strong,nonatomic) NSString *top;
+
+@property (strong,nonatomic) NSString *backgroundcolor;
+
+@property (strong,nonatomic) NSString *background;
+
+
+@property (strong,nonatomic) NSString *display;
+
+@property (strong,nonatomic) NSString *content;
+
+@property (strong,nonatomic) NSString *clear;
+
+@property (strong,nonatomic) NSString *textalign;
+
+@property (strong,nonatomic) NSString *padding;
+
+@property (strong,nonatomic) NSString *paddingbottom;
+
+@property (strong,nonatomic) NSString *paddingtop;
+
+@property (strong,nonatomic) NSString *borderbottom;
+
+@property (strong,nonatomic) NSString *verticalalign;
+
+@property (strong,nonatomic) NSString *color;
+
+@property (strong,nonatomic) NSString *zindex;
+
+@property (strong,nonatomic) NSString *fontweight;
+
+@property (strong,nonatomic) NSString *outline;
+
+@end
