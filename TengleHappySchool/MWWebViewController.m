@@ -237,6 +237,20 @@
     
     
     NSURL *path = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"html"];
+    
+    
+    NSString *wxssFile = [[NSBundle mainBundle] pathForResource:@"mine" ofType:@"wxss"];
+    NSString *wxssFileContent = [[NSString alloc] initWithContentsOfFile:wxssFile encoding:NSUTF8StringEncoding error:nil];
+    
+    MLLog(@"wxss文件是：%@",wxssFileContent);
+    
+    NSString *wxmlFile = [[NSBundle mainBundle] pathForResource:@"mine" ofType:@"wxml"];
+    NSString *wxmlFileContent = [[NSString alloc] initWithContentsOfFile:wxmlFile encoding:NSUTF8StringEncoding error:nil];
+    
+    MLLog(@"wxml文件是：%@",wxmlFileContent);
+    
+
+
     [self.webView loadRequest:[NSURLRequest requestWithURL:path]];
     [self.view addSubview:self.webView];
     

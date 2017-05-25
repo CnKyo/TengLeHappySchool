@@ -24,6 +24,10 @@
 		524D75821ED6AF520025E282 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D75811ED6AF520025E282 /* CoreTelephony.framework */; };
 		524D75841ED6AF590025E282 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D75831ED6AF590025E282 /* SystemConfiguration.framework */; };
 		524D75861ED6AF6A0025E282 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D75851ED6AF6A0025E282 /* libz.tbd */; };
+		524D758C1ED6B1E70025E282 /* mine.js in Resources */ = {isa = PBXBuildFile; fileRef = 524D75881ED6B1E70025E282 /* mine.js */; };
+		524D758D1ED6B1E70025E282 /* mine.json in Resources */ = {isa = PBXBuildFile; fileRef = 524D75891ED6B1E70025E282 /* mine.json */; };
+		524D758E1ED6B1E70025E282 /* mine.wxml in Resources */ = {isa = PBXBuildFile; fileRef = 524D758A1ED6B1E70025E282 /* mine.wxml */; };
+		524D758F1ED6B1E70025E282 /* mine.wxss in Resources */ = {isa = PBXBuildFile; fileRef = 524D758B1ED6B1E70025E282 /* mine.wxss */; };
 		5258B79C1ED514EF00805554 /* app.json in Resources */ = {isa = PBXBuildFile; fileRef = 5258B79B1ED514EF00805554 /* app.json */; };
 		5258B79F1ED516F700805554 /* MWWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5258B79E1ED516F700805554 /* MWWebViewController.m */; };
 		5258B7A11ED5335200805554 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5258B7A01ED5335200805554 /* libsqlite3.0.tbd */; };
@@ -84,6 +88,10 @@
 		524D75811ED6AF520025E282 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		524D75831ED6AF590025E282 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		524D75851ED6AF6A0025E282 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		524D75881ED6B1E70025E282 /* mine.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = mine.js; sourceTree = "<group>"; };
+		524D75891ED6B1E70025E282 /* mine.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mine.json; sourceTree = "<group>"; };
+		524D758A1ED6B1E70025E282 /* mine.wxml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mine.wxml; sourceTree = "<group>"; };
+		524D758B1ED6B1E70025E282 /* mine.wxss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mine.wxss; sourceTree = "<group>"; };
 		5258B79B1ED514EF00805554 /* app.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = app.json; sourceTree = "<group>"; };
 		5258B79D1ED516F700805554 /* MWWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWWebViewController.h; sourceTree = "<group>"; };
 		5258B79E1ED516F700805554 /* MWWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWWebViewController.m; sourceTree = "<group>"; };
@@ -175,6 +183,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		524D75871ED6B1E70025E282 /* mine */ = {
+			isa = PBXGroup;
+			children = (
+				524D75881ED6B1E70025E282 /* mine.js */,
+				524D75891ED6B1E70025E282 /* mine.json */,
+				524D758A1ED6B1E70025E282 /* mine.wxml */,
+				524D758B1ED6B1E70025E282 /* mine.wxss */,
+			);
+			path = mine;
+			sourceTree = "<group>";
+		};
 		5258B79A1ED514EF00805554 /* JsonConfigration */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +246,7 @@
 				52FF84EF1ED40968007305DB /* index1.html */,
 				52FF84F01ED40968007305DB /* index1.js */,
 				52FF85071ED42862007305DB /* test.html */,
+				524D75871ED6B1E70025E282 /* mine */,
 				5258B7A21ED55E0B00805554 /* BaseView */,
 				52FF850C1ED43223007305DB /* MWModel.h */,
 				52FF850D1ED43223007305DB /* MWModel.m */,
@@ -421,11 +441,15 @@
 				52FF84F21ED40968007305DB /* index1.css in Resources */,
 				52FF84CA1ED40942007305DB /* LaunchScreen.storyboard in Resources */,
 				5258B79C1ED514EF00805554 /* app.json in Resources */,
+				524D758D1ED6B1E70025E282 /* mine.json in Resources */,
 				52FF84F41ED40968007305DB /* index1.js in Resources */,
 				52FF84C71ED40942007305DB /* Assets.xcassets in Resources */,
+				524D758C1ED6B1E70025E282 /* mine.js in Resources */,
 				52FF85081ED42862007305DB /* test.html in Resources */,
+				524D758E1ED6B1E70025E282 /* mine.wxml in Resources */,
 				52FF84C51ED40942007305DB /* Main.storyboard in Resources */,
 				52FF84F11ED40968007305DB /* image.png in Resources */,
+				524D758F1ED6B1E70025E282 /* mine.wxss in Resources */,
 				52FF84F31ED40968007305DB /* index1.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

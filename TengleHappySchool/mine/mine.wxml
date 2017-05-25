@@ -1,0 +1,116 @@
+<!--pages/wode/index.wxml-->
+<view class="leui_wrap">
+  <view class="leui_page">
+    <view class="bg_blue pub_padding">
+      <button class="bg_orange float_right le_btn">签到</button>
+      <view class="avatar float_left">
+        <image src="../../images/user_avatar.jpg" class="user_avatar"></image>
+      </view>
+      <view class="user_info">
+        <ul>
+          <li style="font-size:26rpx;">
+            <span>18716353540</span>
+            <span>徐同学</span>
+            <image src="../../images/icon_dj.png" class="icon_dj float_right"></image>
+          </li>
+          <li>
+            <!--进度条-->
+            <!--<view class="progress">
+              <view class="progressBar">
+                <view class="progressWidth" style="width:60%;"></view>
+              </view>
+            </view>-->
+            <progress percent="60" stroke-width="3" activeColor="#fff" backgroundColor="#bdd6f3" style="margin:20rpx 0;" />
+          </li>
+          <li class="font_size_sm">
+            <span>LV3</span>
+            <span>黄金会员 </span>
+            <span> 剩<b>365</b>天上网时长</span>
+          </li>
+        </ul>
+      </view>
+    </view>
+    <view class="assets margin_tb">
+      <ul>
+        <li><span class="color_orange font_size_lg">58356</span></li>
+        <li class="font_size_sm">财富值</li>
+      </ul>
+      <ul class="float_right">
+        <li><span class="color_orange font_size_lg">2500</span>/个</li>
+        <li class="font_size_sm">金币</li>
+      </ul>
+    </view>
+    <view class="advertisement bg_white pub_padding margin_tb">
+      <ul class="float_left">
+        <li>
+          <image src="../../images/ad_01.png" alt=""></image>
+        </li>
+      </ul>
+      <ul class="float_right">
+        <li>
+          <image src="../../images/ad_02.png" alt=""></image>
+        </li>
+      </ul>
+    </view>
+    <view class="my_list bg_white pub_padding margin_tb">
+      <block wx:for="{{userListInfo}}">
+        <navigator class="list_cell" url="../mine/{{item.url}}">
+          <view class="list_cell_icon">
+            <image src="{{item.icon}}" class="icon_style"></image>
+          </view>
+          <view class="list_cell_text">{{item.text}}</view>
+          <image src="../../images/icon_gt.png" class="icon_gt"></image>
+        </navigator>
+        <!--<li> 
+        <image src="../../images/my_laundry.png" class="icon_style"></image>
+        我的洗衣
+          <image src="../../images/icon_gt.png" class="icon_gt"></image>
+        </li>
+        <li>
+        <image src="../../images/my_task.png" class="icon_style"></image>
+        我的任务
+          <image src="../../images/icon_gt.png" class="icon_gt"></image>
+        </li>
+        <li>
+        <image src="../../images/my_order.png" class="icon_style"></image>
+        我的订单
+          <image src="../../images/icon_gt.png" class="icon_gt"></image>
+        </li>
+        <li>
+        <image src="../../images/my_msg.png" class="icon_style" style="width:34rpx;height:34rpx;"></image>
+        我的消息
+          <image src="../../images/icon_gt.png" class="icon_gt"></image>
+        </li>
+        <li>
+       <image src="../../images/help.png" class="icon_style"></image>
+        帮助中心
+          <image src="../../images/icon_gt.png" class="icon_gt"></image>
+        </li>
+        <li>
+        <image src="../../images/join_us.png" class="icon_style"></image>
+        加入我们
+          <image src="../../images/icon_gt.png" class="icon_gt"></image>
+        </li>
+        <li style="border-bottom:none;">
+        <image src="../../images/contact_us.png" class="icon_style"></image>
+        联系我们
+          <image src="../../images/icon_gt.png" class="icon_gt"></image>
+        </li>-->
+      </block>
+    </view>
+  </view>
+  <!-- 弹出框 -->
+  <view class="play_status_box" style="display: none;">
+    <view class="play_popup">
+      <view class="popup_tit send_succ_tit">
+        签到成功！
+        <span class="pub_btn_close">×</span>
+      </view>
+      <view class="popup_con">
+        <p>恭喜您获得 <span class="color_orange">1枚</span> 金币。</p>
+        <a href="javascript:;" class="bg_orange btn_view_record"><span>查看记录</span></a>
+      </view>
+    </view>
+  </view>
+  <!-- /弹出框 -->
+</view>
