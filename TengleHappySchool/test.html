@@ -27,7 +27,11 @@
     <div id="SwiftDiv">
       <span id="jsParamFuncSpan" style="color: red; font-size: 50px;"></span>
     </div>
-    
+    <form>
+        name:
+        <input type="text" name="name" placeholder="please input name" id="name" onfocus="changeEnd()">
+            <br/>
+    </form>
     <script type="text/javascript">
       function callJsAlert() {
         alert('Objective-C call js to show alert');
@@ -49,11 +53,25 @@
     }
     
     function callJsInput() {
-<!--      var response = prompt('Hello', 'Please input your name:');-->
-<!--      document.getElementById('jsParamFuncSpan').innerHTML = response;-->
+      var response = prompt('Hello', 'Please input your name:');
+      document.getElementById('jsParamFuncSpan').innerHTML = response;
 
        // AppModel是我们所注入的对象
       window.webkit.messageHandlers.AppModel.postMessage({body: {'id':'3','name':'thirdClicked'}});
+    }
+
+    function changeEnd(){
+
+        
+        if (mName.value==""){
+            
+
+            mName.value="请输入名称"
+        }
+        var response = prompt(mName.value, 'Please input your name:');
+        document.getElementById('jsParamFuncSpan').innerHTML = response;
+        window.webkit.messageHandlers.AppModel.postMessage({body: {'id':'6','content':mName.value}});
+
     }
       </script>
   </body>

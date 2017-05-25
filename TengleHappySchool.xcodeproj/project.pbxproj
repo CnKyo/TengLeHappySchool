@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		524D75661ED6AEC50025E282 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D75651ED6AEC50025E282 /* AVFoundation.framework */; };
+		524D75681ED6AED50025E282 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D75671ED6AED50025E282 /* UserNotifications.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		524D756A1ED6AEEB0025E282 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D75691ED6AEEB0025E282 /* libstdc++.tbd */; };
+		524D756C1ED6AEF80025E282 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D756B1ED6AEF80025E282 /* libicucore.tbd */; };
+		524D756E1ED6AF020025E282 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D756D1ED6AF020025E282 /* CoreText.framework */; };
+		524D75701ED6AF0A0025E282 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D756F1ED6AF0A0025E282 /* AddressBook.framework */; };
+		524D75721ED6AF0F0025E282 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D75711ED6AF0F0025E282 /* AddressBookUI.framework */; };
+		524D75741ED6AF1C0025E282 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D75731ED6AF1C0025E282 /* Security.framework */; };
+		524D75761ED6AF280025E282 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D75751ED6AF280025E282 /* Foundation.framework */; };
+		524D75781ED6AF2E0025E282 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D75771ED6AF2E0025E282 /* CoreGraphics.framework */; };
+		524D757A1ED6AF350025E282 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D75791ED6AF350025E282 /* CoreFoundation.framework */; };
+		524D757C1ED6AF3D0025E282 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D757B1ED6AF3D0025E282 /* CFNetwork.framework */; };
+		524D757E1ED6AF440025E282 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D757D1ED6AF440025E282 /* QuartzCore.framework */; };
+		524D75801ED6AF4C0025E282 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D757F1ED6AF4C0025E282 /* AdSupport.framework */; };
+		524D75821ED6AF520025E282 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D75811ED6AF520025E282 /* CoreTelephony.framework */; };
+		524D75841ED6AF590025E282 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D75831ED6AF590025E282 /* SystemConfiguration.framework */; };
+		524D75861ED6AF6A0025E282 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D75851ED6AF6A0025E282 /* libz.tbd */; };
 		5258B79C1ED514EF00805554 /* app.json in Resources */ = {isa = PBXBuildFile; fileRef = 5258B79B1ED514EF00805554 /* app.json */; };
 		5258B79F1ED516F700805554 /* MWWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5258B79E1ED516F700805554 /* MWWebViewController.m */; };
 		5258B7A11ED5335200805554 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5258B7A01ED5335200805554 /* libsqlite3.0.tbd */; };
@@ -49,6 +66,24 @@
 
 /* Begin PBXFileReference section */
 		0092CAFAE33BFB3805A644C4 /* Pods-TengleHappySchool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TengleHappySchool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TengleHappySchool/Pods-TengleHappySchool.debug.xcconfig"; sourceTree = "<group>"; };
+		524D75641ED6AE900025E282 /* TengleHappySchool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TengleHappySchool.entitlements; sourceTree = "<group>"; };
+		524D75651ED6AEC50025E282 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		524D75671ED6AED50025E282 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		524D75691ED6AEEB0025E282 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		524D756B1ED6AEF80025E282 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		524D756D1ED6AF020025E282 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		524D756F1ED6AF0A0025E282 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		524D75711ED6AF0F0025E282 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		524D75731ED6AF1C0025E282 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		524D75751ED6AF280025E282 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		524D75771ED6AF2E0025E282 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		524D75791ED6AF350025E282 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		524D757B1ED6AF3D0025E282 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		524D757D1ED6AF440025E282 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		524D757F1ED6AF4C0025E282 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		524D75811ED6AF520025E282 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		524D75831ED6AF590025E282 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		524D75851ED6AF6A0025E282 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5258B79B1ED514EF00805554 /* app.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = app.json; sourceTree = "<group>"; };
 		5258B79D1ED516F700805554 /* MWWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWWebViewController.h; sourceTree = "<group>"; };
 		5258B79E1ED516F700805554 /* MWWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWWebViewController.m; sourceTree = "<group>"; };
@@ -91,6 +126,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				524D75861ED6AF6A0025E282 /* libz.tbd in Frameworks */,
+				524D75841ED6AF590025E282 /* SystemConfiguration.framework in Frameworks */,
+				524D75821ED6AF520025E282 /* CoreTelephony.framework in Frameworks */,
+				524D75801ED6AF4C0025E282 /* AdSupport.framework in Frameworks */,
+				524D757E1ED6AF440025E282 /* QuartzCore.framework in Frameworks */,
+				524D757C1ED6AF3D0025E282 /* CFNetwork.framework in Frameworks */,
+				524D757A1ED6AF350025E282 /* CoreFoundation.framework in Frameworks */,
+				524D75781ED6AF2E0025E282 /* CoreGraphics.framework in Frameworks */,
+				524D75761ED6AF280025E282 /* Foundation.framework in Frameworks */,
+				524D75741ED6AF1C0025E282 /* Security.framework in Frameworks */,
+				524D75721ED6AF0F0025E282 /* AddressBookUI.framework in Frameworks */,
+				524D75701ED6AF0A0025E282 /* AddressBook.framework in Frameworks */,
+				524D756E1ED6AF020025E282 /* CoreText.framework in Frameworks */,
+				524D756C1ED6AEF80025E282 /* libicucore.tbd in Frameworks */,
+				524D756A1ED6AEEB0025E282 /* libstdc++.tbd in Frameworks */,
+				524D75681ED6AED50025E282 /* UserNotifications.framework in Frameworks */,
+				524D75661ED6AEC50025E282 /* AVFoundation.framework in Frameworks */,
 				5258B7A11ED5335200805554 /* libsqlite3.0.tbd in Frameworks */,
 				52FF85101ED43CE0007305DB /* JavaScriptCore.framework in Frameworks */,
 				60921DA19A8E41BD93057FE6 /* libPods-TengleHappySchool.a in Frameworks */,
@@ -167,6 +219,7 @@
 		52FF84B91ED40942007305DB /* TengleHappySchool */ = {
 			isa = PBXGroup;
 			children = (
+				524D75641ED6AE900025E282 /* TengleHappySchool.entitlements */,
 				5258B79A1ED514EF00805554 /* JsonConfigration */,
 				52FF84FB1ED41E34007305DB /* WKHeader.h */,
 				52FF84ED1ED40968007305DB /* image.png */,
@@ -221,6 +274,23 @@
 		FE325B93BACD4DD848696866 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				524D75851ED6AF6A0025E282 /* libz.tbd */,
+				524D75831ED6AF590025E282 /* SystemConfiguration.framework */,
+				524D75811ED6AF520025E282 /* CoreTelephony.framework */,
+				524D757F1ED6AF4C0025E282 /* AdSupport.framework */,
+				524D757D1ED6AF440025E282 /* QuartzCore.framework */,
+				524D757B1ED6AF3D0025E282 /* CFNetwork.framework */,
+				524D75791ED6AF350025E282 /* CoreFoundation.framework */,
+				524D75771ED6AF2E0025E282 /* CoreGraphics.framework */,
+				524D75751ED6AF280025E282 /* Foundation.framework */,
+				524D75731ED6AF1C0025E282 /* Security.framework */,
+				524D75711ED6AF0F0025E282 /* AddressBookUI.framework */,
+				524D756F1ED6AF0A0025E282 /* AddressBook.framework */,
+				524D756D1ED6AF020025E282 /* CoreText.framework */,
+				524D756B1ED6AEF80025E282 /* libicucore.tbd */,
+				524D75691ED6AEEB0025E282 /* libstdc++.tbd */,
+				524D75671ED6AED50025E282 /* UserNotifications.framework */,
+				524D75651ED6AEC50025E282 /* AVFoundation.framework */,
 				5258B7A01ED5335200805554 /* libsqlite3.0.tbd */,
 				52FF850F1ED43CE0007305DB /* JavaScriptCore.framework */,
 				B7EF1FD589276A063FBE71AB /* libPods-TengleHappySchool.a */,
@@ -300,6 +370,14 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 7U7AE55838;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					52FF84CF1ED40942007305DB = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -577,6 +655,7 @@
 			baseConfigurationReference = 0092CAFAE33BFB3805A644C4 /* Pods-TengleHappySchool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TengleHappySchool/TengleHappySchool.entitlements;
 				DEVELOPMENT_TEAM = 7U7AE55838;
 				INFOPLIST_FILE = TengleHappySchool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -590,6 +669,7 @@
 			baseConfigurationReference = 5A2CCBE9B56BF12EB0E2E5E8 /* Pods-TengleHappySchool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TengleHappySchool/TengleHappySchool.entitlements;
 				DEVELOPMENT_TEAM = 7U7AE55838;
 				INFOPLIST_FILE = TengleHappySchool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

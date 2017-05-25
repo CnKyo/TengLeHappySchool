@@ -268,8 +268,19 @@
 //    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"后退" style:UIBarButtonItemStyleDone target:self action:@selector(goback)];
 //    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"前进" style:UIBarButtonItemStyleDone target:self action:@selector(gofarward)];
     
+    
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
 }
+-(void)keyboardWillHide:(NSNotification *)notification
+{
+    NSString *jsToTextFiled = @"document.getElementById('name').innerHTML = response";
 
+    [self.webView evaluateJavaScript:jsToTextFiled completionHandler:^(id _Nullable result, NSError * _Nullable error) {
+        MLLog(@"result:%@----error:%@",result, error);
+    }];
+}
 - (void)goback {
     if ([self.webView canGoBack]) {
         [self.webView goBack];
@@ -298,9 +309,12 @@
     if ([model.body.id isEqualToString:@"2"]) {
         NSString *ocTojs = [NSString stringWithFormat:@"alert('%s')","this is alertview pop to "];
         [self.webView evaluateJavaScript:ocTojs completionHandler:^(id _Nullable result, NSError * _Nullable error) {
-            NSLog(@"%@----%@",result, error);
+            MLLog(@"%@----%@",result, error);
         }];
-    }else{
+    }else if ([model.body.id isEqualToString:@"3"]){
+        MLLog(@"3");
+    }
+    else{
         MWWebViewController *vc = [MWWebViewController new];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
@@ -383,9 +397,13 @@
 - (void)webView:(WKWebView *)webView didCommitNavigation:(null_unspecified WKNavigation *)navigation {
     MLLog(@"%s", __FUNCTION__);
 }
-
+#pragma mark----****----web加载完成后调用
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation {
     MLLog(@"%s", __FUNCTION__);
+    NSString *jsToTextFiled = @"name";
+    [self.webView evaluateJavaScript:jsToTextFiled completionHandler:^(id _Nullable result, NSError * _Nullable error) {
+        MLLog(@"%@----%@",result, error);
+    }];
 }
 
 - (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
@@ -433,10 +451,11 @@
     MLLog(@"%@", message);
 }
 
+#pragma mark----****----弹出输入框
 - (void)webView:(WKWebView *)webView runJavaScriptTextInputPanelWithPrompt:(NSString *)prompt defaultText:(nullable NSString *)defaultText initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(NSString * __nullable result))completionHandler {
     MLLog(@"%s", __FUNCTION__);
     
-    MLLog(@"%@", prompt);
+    MLLog(@"prompt的值是：%@", prompt);
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"textinput" message:@"JS调用输入框" preferredStyle:UIAlertControllerStyleAlert];
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.textColor = [UIColor redColor];
@@ -448,7 +467,6 @@
     
     [self presentViewController:alert animated:YES completion:NULL];
 }
-
 
 /**
  *  对象转换为字典
