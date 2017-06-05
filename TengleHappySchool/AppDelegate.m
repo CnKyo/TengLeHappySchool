@@ -36,7 +36,7 @@
     NSMutableArray *mArr = [NSMutableArray new];
     mArr = [MWAppConfig searchWithWhere:nil];
     
-//    [self tabbarInit];
+    [self tabbarInit];
 
 
 //    [[UINavigationBar appearance] setTintColor:[MWUtil MWColorWithHexString:mAPPConfig.window.navigationBarBackgroundColor]];

@@ -26,18 +26,18 @@
     NSMutableArray *mWXSSArr;
     NSMutableArray *mTarr;
 
-    WXCSS *mCssObj;
+    int mIndex;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.navigationItem.title = @"测试页面";
-    
+    mIndex = 0;
     mWXSSArr = [NSMutableArray new];
     mTarr = [NSMutableArray new];
 
-    mCssObj = [WXCSS new];
-    mCssObj.mWXSS = [WXSSObj new];
+//    mCssObj = [WXCSS new];
+//    mCssObj.mWXSS = [WXSSObj new];
     [self xmlparser];
 }
 - (void)xmlparser{
@@ -60,40 +60,51 @@
         }
         NSArray *mSubCss = [MWUtil MWCutterStringWithText:mCss cutterText:@"."];
         NSString *css = nil;
-        if (mSubCss.count>2) {
+        if (mSubCss.count>3){
+            css = [NSString stringWithFormat:@".%@.%@.%@",mSubCss[1],mSubCss[2],mSubCss[3]];
+            
+        }
+        else  if (mSubCss.count>2) {
             css = [NSString stringWithFormat:@".%@.%@",mSubCss[1],mSubCss[2]];
-
-        }else{
+            
+        }
+        else{
             css = [NSString stringWithFormat:@".%@",mSubCss[1]];
 
         }
 
         MLLog(@"最后的css文件是：%@",css);
         [mWXSSArr addObject:css];
+        MLLog(@"ARR最后一个对象是：%@",[mWXSSArr lastObject]);
     }
 
     for (NSString *mCss in mWXSSArr) {
         MLLog(@"最后的css文件是：%@",mCss);
+        
         NSArray *mSubCss = [MWUtil MWCutterStringWithText:mCss cutterText:@"{"];
         if (mSubCss.count<2) {
             continue;
         }
         NSString *mOne = mSubCss[0];
         NSString *mTwo = mSubCss[1];
+        WXCSS *mCssObj = [WXCSS new];
         mCssObj.mName = mOne;
+        mCssObj.mWXSS = [WXSSObj new];
         NSArray *mMargin = [MWUtil MWCutterStringWithText:mTwo cutterText:@";"];
         for (int i = 0; i<mMargin.count; i++) {
-        
+
             NSString *mF = mMargin[i];
             
             if (mF.length<=0 || [mF isEqualToString:@" "] || mF==nil || [mF isEqualToString:@"\r\n}"]) {
                 continue;
             }
-            
+
             NSArray *mContent = [MWUtil MWCutterStringWithText:mF cutterText:@":"];
+            
+
             for (int j = 0; j<mContent.count; j++) {
                 
-   
+
                 NSString *mSubcontent = [self characterText:mContent[j]];
                 if (j == mContent.count-1) {
                     continue;
@@ -142,6 +153,10 @@
                 if ([mSubcontent isEqualToString:@"backgroundcolor"]) {
                     mCssObj.mWXSS.backgroundcolor = mPX;
                 }
+                if ([mSubcontent isEqualToString:@"background"]) {
+                    mCssObj.mWXSS.background = mPX;
+
+                }
                 if ([mSubcontent isEqualToString:@"display"]) {
                     mCssObj.mWXSS.display = mPX;
                 }
@@ -182,10 +197,11 @@
                 if ([mSubcontent isEqualToString:@"outline"]) {
                     mCssObj.mWXSS.outline = mPX;
                 }
-            
+                mCssObj.mWXSS = mCssObj.mWXSS;
+
             }
 
-            
+
         }
         [mTarr addObject:mCssObj];
     }
@@ -215,10 +231,24 @@
 //2.解析XML文件中所有的元素
 -(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary<NSString *,NSString *> *)attributeDict{
     MLLog(@"解析XML文件中所有的元素:elementName:%@,attributeDict:%@",elementName,attributeDict);
-    if ([elementName isEqualToString:@"view"]) {
 
+    if ([elementName isEqualToString:@"view"]) {
+        NSDictionary *dic = attributeDict;
         MLLog(@"elementName是:%@",elementName);
+        for (WXCSS *mCssObj in mTarr) {
+            
+            if ([self rangeOfString:[attributeDict objectForKey:@"class"] ofText:mCssObj.mName]) {
+                
+                UIView *mView = [UIView new];
+                mView.frame = self.view.bounds;
+                [self.view addSubview:mView];
+            }
+        }
     }
+
+    MLLog(@"一共执行了多少次：%d",mIndex);
+    
+    
 }
 //3.XML文件中每一个元素解析完成
 -(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
@@ -236,6 +266,28 @@
 - (NSString *)characterText:(NSString *)mText{
 
     NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@"@\r\n ／（）¥「」＂、[]{}#%-*+=_\\|~＜＞$€^•'@#$%^&*()_+'\""];
+    
+    return [mText stringByTrimmingCharactersInSet:set];
+}
+- (BOOL)rangeOfString:(NSString *)mString ofText:(NSString *)mText{
+
+//    NSRange range = [mString rangeOfString:mText];
+//    if (range.location!=NSNotFound) {
+//        return YES;
+//    }else{
+//        return NO;
+//    }
+    
+    
+    if ([mString containsString:[self characterSpecilText:mText]]) {
+        return YES;
+    }else{
+        return NO;
+    }
+}
+- (NSString *)characterSpecilText:(NSString *)mText{
+    
+    NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@"@\r\n .／（）¥「」＂、[]{}#%-*+=_\\|~＜＞$€^•'@#$%^&*()_+'\""];
     
     return [mText stringByTrimmingCharactersInSet:set];
 }
