@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JWLaunchAd.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>LKDBHelper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,7 +34,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TengleHappySchool.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RSKImageCropper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,12 +77,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1F1E28C815BD2CDA67E3B9B8FE2D73B7</key>
+		<key>04CF549EBEEE7BC87AEAE35397184D94</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>57CFDEF9633FFF1038CC81929EA1147E</key>
+		<key>30A4F780ED5FF64677266020394C8A3E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,12 +92,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>61B64182BE239FAC4C67E8239ADD7127</key>
+		<key>7F6D0D486945916733C13C5B529878CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7F90245EC512A9DF8D413E633E15A9B7</key>
+		<key>85B5C70E3950CAFAEB5150B32301AB65</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,7 +107,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8E4BF5CA96E17BFB680477D9194714CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9DC8D9E02903E93BD0B2FEC9D846EA20</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9E033EDB5EC0819481B0546434FA577B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AD13EF824CF9C33018FEC856EA539993</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B58C1F9D0C827F58FC8C442F3CAD00BB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,7 +137,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C0747C2EF788C14C1FD6CBB1CF0E8171</key>
+		<key>C8A648D68BE65FB7C53E674810670FEF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

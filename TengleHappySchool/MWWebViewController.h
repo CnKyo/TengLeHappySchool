@@ -78,6 +78,7 @@
  @return 返回一张图片
  */
 + (UIImage *)MWLoadLocalImage:(NSString *)fileName ofType:(NSString *)extension inDirectory:(NSString *)directoryPath;
+
 @end
 
 @interface MWWebViewController : UIViewController

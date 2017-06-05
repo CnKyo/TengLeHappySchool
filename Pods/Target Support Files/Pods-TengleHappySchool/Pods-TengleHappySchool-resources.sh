@@ -79,6 +79,18 @@ EOM
       ;;
   esac
 }
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "AlipaySDK-2.0/AlipaySDK.bundle"
+  install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "RSKImageCropper/RSKImageCropper/RSKImageCropperStrings.bundle"
+  install_resource "ShareSDK3/ShareSDK/Support/Required/ShareSDK.bundle"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "AlipaySDK-2.0/AlipaySDK.bundle"
+  install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "RSKImageCropper/RSKImageCropper/RSKImageCropperStrings.bundle"
+  install_resource "ShareSDK3/ShareSDK/Support/Required/ShareSDK.bundle"
+fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

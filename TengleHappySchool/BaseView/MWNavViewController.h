@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "WKHeader.h"
-#import <JKCategories/JKUIKit.h>
 
 @interface MWNavViewController : UINavigationController
 

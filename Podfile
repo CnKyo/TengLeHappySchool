@@ -14,6 +14,7 @@ pod 'MJRefresh'
 pod 'AlipaySDK-2.0'
 pod 'WechatOpenSDK'
 pod 'ShareSDK3'
+pod 'JKCategories'
 
 
 end

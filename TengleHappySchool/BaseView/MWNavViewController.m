@@ -8,6 +8,7 @@
 
 #import "MWNavViewController.h"
 #import "MWWebViewController.h"
+#import <JKCategories/JKUIKit.h>
 @class MWUtil;
 @interface MWNavViewController ()<UIGestureRecognizerDelegate>
 
