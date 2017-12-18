@@ -82,6 +82,7 @@
 @end
 
 @interface MWWebViewController : UIViewController
+@property(nonatomic,strong)NSXMLParser *paser;
 
 
 @end

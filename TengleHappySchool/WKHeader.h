@@ -18,6 +18,10 @@
 #import "GDataXMLNode.h"
 
 
+#import <objc/runtime.h>
+#import <objc/message.h>
+#import <objc/NSObjCRuntime.h>
+
 //#import <NSObject+LKDBHelper.h>
 
 //#define  WKSyncQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);

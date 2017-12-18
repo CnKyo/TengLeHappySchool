@@ -10,7 +10,8 @@
 #import <WebKit/WebKit.h>
 #import "WKHeader.h"
 #import "MWModel.h"
-#import <objc/runtime.h>
+
+#import "MWXMLParserDictionary.h"
 
 @implementation MWUtil
 
@@ -285,10 +286,17 @@
     MLLog(@"wxss文件是：%@",wxssFileContent);
     
     NSString *wxmlFile = [[NSBundle mainBundle] pathForResource:@"mine" ofType:@"wxml"];
-    NSString *wxmlFileContent = [[NSString alloc] initWithContentsOfFile:wxmlFile encoding:NSUTF8StringEncoding error:nil];
-    NSData *wxmlData = [[NSData alloc]initWithContentsOfFile:wxmlFile];
+//    NSString *wxmlFileContent = [[NSString alloc] initWithContentsOfFile:wxmlFile encoding:NSUTF8StringEncoding error:nil];
+//    NSData *wxmlData = [[NSData alloc]initWithContentsOfFile:wxmlFile];
     
-    [self XMLParserWithData:wxmlData];
+    NSData *data = [[NSData alloc] initWithContentsOfFile:wxmlFile];
+    self.paser = [[NSXMLParser alloc] initWithData:data];
+    self.paser.delegate = self;
+    NSError *error = nil;
+    NSDictionary *dic = [MWXMLParserDictionary dictionaryForXMLData:data error:&error];
+    NSLog(@"输出字典结果：== %@",dic);
+    
+//    [self XMLParserWithData:wxmlData];
 }
 //*利用 NSXMLParser 方式
 -(void)XMLParserWithData:(NSData *)data{

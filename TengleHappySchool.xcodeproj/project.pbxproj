@@ -35,6 +35,7 @@
 		5258B7A11ED5335200805554 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5258B7A01ED5335200805554 /* libsqlite3.0.tbd */; };
 		5258B7A51ED55E2300805554 /* MWTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5258B7A41ED55E2300805554 /* MWTabViewController.m */; };
 		5258B7A81ED55E8100805554 /* MWNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5258B7A71ED55E8100805554 /* MWNavViewController.m */; };
+		52AC6A6F1EE7AFC3001D03AB /* MWXMLParserDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AC6A6E1EE7AFC3001D03AB /* MWXMLParserDictionary.m */; };
 		52FF84BC1ED40942007305DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FF84BB1ED40942007305DB /* main.m */; };
 		52FF84BF1ED40942007305DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FF84BE1ED40942007305DB /* AppDelegate.m */; };
 		52FF84C21ED40942007305DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FF84C11ED40942007305DB /* ViewController.m */; };
@@ -105,6 +106,8 @@
 		5258B7A41ED55E2300805554 /* MWTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTabViewController.m; sourceTree = "<group>"; };
 		5258B7A61ED55E8100805554 /* MWNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNavViewController.h; sourceTree = "<group>"; };
 		5258B7A71ED55E8100805554 /* MWNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNavViewController.m; sourceTree = "<group>"; };
+		52AC6A6D1EE7AFC3001D03AB /* MWXMLParserDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWXMLParserDictionary.h; sourceTree = "<group>"; };
+		52AC6A6E1EE7AFC3001D03AB /* MWXMLParserDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWXMLParserDictionary.m; sourceTree = "<group>"; };
 		52FF84B71ED40942007305DB /* TengleHappySchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TengleHappySchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FF84BB1ED40942007305DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		52FF84BD1ED40942007305DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -205,6 +208,8 @@
 			children = (
 				524D75921ED6C0FF0025E282 /* GDataXMLNode.h */,
 				524D75931ED6C0FF0025E282 /* GDataXMLNode.m */,
+				52AC6A6D1EE7AFC3001D03AB /* MWXMLParserDictionary.h */,
+				52AC6A6E1EE7AFC3001D03AB /* MWXMLParserDictionary.m */,
 			);
 			path = GDataXml;
 			sourceTree = "<group>";
@@ -544,6 +549,7 @@
 				524D75941ED6C0FF0025E282 /* GDataXMLNode.m in Sources */,
 				52FF850E1ED43223007305DB /* MWModel.m in Sources */,
 				52FF84BF1ED40942007305DB /* AppDelegate.m in Sources */,
+				52AC6A6F1EE7AFC3001D03AB /* MWXMLParserDictionary.m in Sources */,
 				52FF84BC1ED40942007305DB /* main.m in Sources */,
 				5258B7A51ED55E2300805554 /* MWTabViewController.m in Sources */,
 				5258B79F1ED516F700805554 /* MWWebViewController.m in Sources */,

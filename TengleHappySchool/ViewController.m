@@ -12,12 +12,15 @@
 #import "MWModel.h"
 #import <objc/runtime.h>
 #import "MWWebViewController.h"
+#import "MWXMLParserDictionary.h"
 
 @class MWUtil;
 @interface ViewController ()<WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate,NSXMLParserDelegate>
 
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) UIProgressView *progressView;
+@property(nonatomic,strong)NSXMLParser *paser;
+
 
 @end
 
@@ -43,6 +46,8 @@
 - (void)xmlparser{
     [mWXSSArr removeAllObjects];
     NSString *wxssFile = [[NSBundle mainBundle] pathForResource:@"mine" ofType:@"wxss"];
+   
+    
     NSString *wxssFileContent = [[NSString alloc] initWithContentsOfFile:wxssFile encoding:NSUTF8StringEncoding error:nil];
     
     NSArray *mCSSArr = [MWUtil MWCutterStringWithText:wxssFileContent cutterText:@"}"];
